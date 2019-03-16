@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AboutUs extends Component {
+class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {  };
@@ -8,10 +8,10 @@ class AboutUs extends Component {
     render() {
         return (
             <div className="container">
-                
+                <h1>Home</h1>
             </div>
         );
     }
 }
 
-export default AboutUs;
+export default Home;
