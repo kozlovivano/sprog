@@ -22,16 +22,16 @@ class NavBar extends Component {
                 </button>
                 <div className="navbar-collapse collapse" id="navbarCollapse">
                     <ul className="navbar-nav ml-auto">
-                        <li className="nav-item active">
+                        <li className="nav-item active mr-3">
                             <a className="nav-link" href="/aboutus">About Us</a>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item mr-3">
                             <a className="nav-link" href="/faq">FAQ's</a>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item mr-3">
                             <a className="nav-link" href="/contactus">Contact Us</a>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item mr-5">
                             <a className="nav-link" href="/login">Login</a>
                         </li>
                     </ul>

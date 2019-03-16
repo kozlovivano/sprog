@@ -1,19 +1,33 @@
+
+@font-face {
+    font-family: 'Eras Light ITC';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Eras Light ITC'), url('./assets/fonts/ERASLGHT.woff') format('woff');
+}
+
 body {
 	margin: 0;
 	padding: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-		sans-serif;
+	font-family: 'Eras Light ITC' !important;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background: url("./assets/png/bg.png");
 }
-
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
-}
-
+/* Theme color */
 .bg-blue{
 	background-color: #3ca7d5;
+}
+
+/* Navbar */
+.navbar .navbar-nav .nav-item .nav-link{
+	font-size: 1.3em;
+	font-weight: 600;
+}
+
+@media (max-width: 576px){
+	.navbar .navbar-nav .nav-item{
+		padding: 10px;
+		margin: 0px !important;
+	}
 }
