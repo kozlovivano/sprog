@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../assets/png/logo.png';
 class NavBar extends Component {
     constructor(props) {
         super(props);
@@ -10,7 +9,7 @@ class NavBar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-sm bg-blue navbar-dark">
-                <a className="navbar-brand" href="/"><img src={logo} alt="Sprog logo" width="100"></img></a>
+                <a className="navbar-brand" href="/"><h1 className="logo">Sprog</h1></a>
                 <button 
                     className="navbar-toggler collapsed" 
                     type="button" data-toggle="collapse" 

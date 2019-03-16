@@ -1,9 +1,17 @@
 
+/* Theme fonts */
 @font-face {
     font-family: 'Eras Light ITC';
     font-style: normal;
     font-weight: normal;
     src: local('Eras Light ITC'), url('./assets/fonts/ERASLGHT.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Yantiq';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Yantiq'), url('./assets/fonts/Yantiq.woff') format('woff');
 }
 
 body {
@@ -13,21 +21,4 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background: url("./assets/png/bg.png");
-}
-/* Theme color */
-.bg-blue{
-	background-color: #3ca7d5;
-}
-
-/* Navbar */
-.navbar .navbar-nav .nav-item .nav-link{
-	font-size: 1.3em;
-	font-weight: 600;
-}
-
-@media (max-width: 576px){
-	.navbar .navbar-nav .nav-item{
-		padding: 10px;
-		margin: 0px !important;
-	}
 }

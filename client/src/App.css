@@ -1,0 +1,23 @@
+
+/* Theme color */
+.bg-blue{
+	background-color: #3ca7d5;
+}
+
+/* Navbar */
+
+.navbar .logo{
+	font-family: 'Yantiq';
+	font-weight: 600;
+}
+.navbar .navbar-nav .nav-item .nav-link{
+	font-size: 1.3em;
+	font-weight: 600;
+}
+
+@media (max-width: 576px){
+	.navbar .navbar-nav .nav-item{
+		padding: 10px;
+		margin: 0px !important;
+	}
+}
