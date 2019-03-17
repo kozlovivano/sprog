@@ -3,7 +3,9 @@
 .bg-blue{
 	background-color: #3ca7d5;
 }
-
+.c-blue{
+	color: #3ca7d5;
+}
 /* Navbar */
 
 .navbar .logo{
