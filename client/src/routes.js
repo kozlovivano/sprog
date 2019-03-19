@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route } from "react-router-dom";
 
-import Home from './components/templates/home';
+import Home from './components/templates/home/home';
 import AboutUs from './components/templates/aboutus/aboutus';
-import ContactUs from './components/templates/contactus';
-import Faq from './components/templates/faq';
-import Login from './components/templates/login';
+import ContactUs from './components/templates/contactus/contactus';
+import Faq from './components/templates/faq/faq';
+import Login from './components/templates/auth/login';
 
 export default(
     <React.Fragment>

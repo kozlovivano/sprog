@@ -10,10 +10,10 @@ const initState = {
                 " After months of working on various ideas we founded this platform and now hopefully sprog helps you like its helped us." 
             ]
         },
-        { 
+        {
             id: 2, 
             title: "Our vision", 
-            img: "https://picsum.photos/360/240?random", 
+            img: "https://source.unsplash.com/360x240", 
             content: [
                 "We founded Sprog in the hop of reconnecting with our children and creating great memories together. So, like the simplicity of our app, our vision at sprog is simple. ",
                 " To connect others and inspire people to realize that 'Whatever the situation, you can create the best outcome.' ",
