@@ -6,8 +6,16 @@
 .c-blue{
 	color: #3ca7d5;
 }
-/* Navbar */
 
+/* Theme style */
+.rounded-xl{
+	border-radius: 10px;
+}
+.rounded-sl{
+	border-radius: 20px;
+}
+
+/* Navbar */
 .navbar .logo{
 	font-family: 'Yantiq';
 	font-weight: 600;

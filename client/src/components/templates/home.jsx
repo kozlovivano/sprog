@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  };
-    }
     render() {
+        console.log(this.props);
         return (
             <div className="container">
                 <h1>Home</h1>
@@ -14,4 +12,12 @@ class Home extends Component {
     }
 }
 
-export default Home;
+const mapStateToProps = state => ({
+    ...state
+});
+
+const mapDispatchToProps = dispatch => ({
+    
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

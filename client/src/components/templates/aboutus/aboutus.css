@@ -1,0 +1,25 @@
+#aboutus .story h3{
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+#aboutus .story:nth-child(even) img{
+    float: right;
+    margin-left: 3em;
+}
+#aboutus .story:nth-child(odd) img{
+    float: left;
+    margin-right: 3em;
+}
+
+@media (max-width: 576px){
+    #aboutus .story h3{
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+    }
+    #aboutus .story img{
+        width: 100%;
+        margin: 20px auto !important;
+        float: none !important;
+    }
+}

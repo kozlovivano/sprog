@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from "react-router-dom";
 
 import Home from './components/templates/home';
-import AboutUs from './components/templates/aboutus';
+import AboutUs from './components/templates/aboutus/aboutus';
 import ContactUs from './components/templates/contactus';
 import Faq from './components/templates/faq';
 import Login from './components/templates/login';
