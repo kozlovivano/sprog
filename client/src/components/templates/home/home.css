@@ -17,6 +17,11 @@
 .home .sprog-btn:focus{
     outline: 0;
 }
+.businesses-landscape{
+    margin-top: 20px;
+    padding-top: 20px;
+    background-color: #3ca7d5;
+}
 
 @media (min-width: 993px){
     .home .sprog-btn{
@@ -25,6 +30,20 @@
 }
 @media (max-width: 768px){
     .home iframe{
+        display: none;
+    }
+}
+@media (max-width: 576px){
+    .businesses-landscape{
+        display: none;
+    }
+    .businesses-portrait{
+        margin-top: 20px;
+        display: block;
+    }
+}
+@media (min-width: 576px){
+    .businesses-portrait{
         display: none;
     }
 }

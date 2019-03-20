@@ -6,7 +6,8 @@ const initState = {
             face: "https://loremflickr.com/g/320/240/paris,girl/all",
             age_range: ["B", "C", "D"],
             status: "Open now",
-            distance: "3.42 km"
+            distance: "3.42 km",
+            description: "Lorem ipsum dolor sit amet, dolorem eloquentiam pri te, ne malorum fabulas imperdiet ius. Qui ea nobis expetenda adversarium. Ancillae euripidis moderatius ad sit. Iudicabit splendide eu pri, affert albucius explicari in sed. Pri habeo omittam disputationi eu."
         },
         {
             id: 2,
@@ -14,7 +15,8 @@ const initState = {
             face: "https://loremflickr.com/320/240/brazil,rio",
             age_range: ["B", "C", "D"],
             status: "Open now",
-            distance: "4.42 km"
+            distance: "4.42 km",
+            description: "Lorem ipsum dolor sit amet, dolorem eloquentiam pri te, ne malorum fabulas imperdiet ius. Qui ea nobis expetenda adversarium. Ancillae euripidis moderatius ad sit. Iudicabit splendide eu pri, affert albucius explicari in sed. Pri habeo omittam disputationi eu."
         },
         {
             id: 3,
@@ -22,7 +24,8 @@ const initState = {
             face: "https://loremflickr.com/g/320/240/paris",
             age_range: ["B", "C", "D"],
             status: "Open now",
-            distance: "5.42 km"
+            distance: "5.42 km",
+            description: "Lorem ipsum dolor sit amet, dolorem eloquentiam pri te, ne malorum fabulas imperdiet ius. Qui ea nobis expetenda adversarium. Ancillae euripidis moderatius ad sit. Iudicabit splendide eu pri, affert albucius explicari in sed. Pri habeo omittam disputationi eu."
         },
         {
             id: 4,
@@ -30,7 +33,8 @@ const initState = {
             face: "https://loremflickr.com/320/240",
             age_range: ["A", "B", "C", "D"],
             status: "Open now",
-            distance: "6.42 km"
+            distance: "6.42 km",
+            description: "Lorem ipsum dolor sit amet, dolorem eloquentiam pri te, ne malorum fabulas imperdiet ius. Qui ea nobis expetenda adversarium. Ancillae euripidis moderatius ad sit. Iudicabit splendide eu pri, affert albucius explicari in sed. Pri habeo omittam disputationi eu."
         },
     ]
 }
