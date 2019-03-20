@@ -1,0 +1,73 @@
+
+/* Counter fragment */
+.counter{
+    border: 3px solid #888888;
+    border-radius: 10px;
+    width: 60%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.counter input{
+    margin-left: 10px;
+    border: none;
+    font-size: 13px;
+    line-height: 30px;
+    width: 75%;
+}
+
+.counter .control{
+    float: right;
+}
+
+.counter .control span{
+    cursor: pointer;
+    font-size: 21.5px;
+    font-weight: 800;
+    color: black;
+}
+
+.counter .control span.minus{
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid #888888;
+}
+
+.counter .control span.plus{
+    padding-right: 10px;
+}
+
+
+/* Position framgment */
+.position{
+    border: 3px solid #888888;
+    border-radius: 10px;
+    width: 60%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.position input{
+    margin-left: 10px;
+    border: none;
+    font-size: 13px;
+    line-height: 30px;
+    width: 75%;
+}
+
+.position .control{
+    float: right;
+}
+
+.position .control span{
+    cursor: pointer;
+    font-size: 21.5px;
+    font-weight: 800;
+    margin-right: 25px;
+}
+@media (max-width: 992px){
+    .counter, .position{
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+}
