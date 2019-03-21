@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-
+import Readmore from '../../utils/readmore';
 import './business.css';
 
 class business extends Component {
+
     render() {
         return (
             <div className="business item">
@@ -20,7 +21,17 @@ class business extends Component {
                 </div>
                 <p className="text">Distance</p>
                 <p className="text">{ this.props.business.distance }</p>
-                <p className="description">{ this.props.business.description }</p>
+                <div className="description">
+                    <Readmore
+                        className="read-more-content"
+                        charLimit={120}
+                        readMoreText="see more"
+                        readLessText="less"
+                    >
+                        { this.props.business.description }
+                    </Readmore>
+                </div>
+                
             </div>
         );
     }
