@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReadMoreAndLess from 'react-read-more-less';
 
 import './business.css';
 
@@ -21,17 +20,7 @@ class business extends Component {
                 </div>
                 <p className="text">Distance</p>
                 <p className="text">{ this.props.business.distance }</p>
-                <div className="description">
-                    <ReadMoreAndLess
-                        ref={this.ReadMore}
-                        className="read-more-content description"
-                        charLimit={120}
-                        readMoreText="see more"
-                        readLessText="less"
-                    >
-                        { this.props.business.description }
-                    </ReadMoreAndLess>
-                </div>
+                <p className="description">{ this.props.business.description }</p>
             </div>
         );
     }
