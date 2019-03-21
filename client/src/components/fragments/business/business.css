@@ -36,6 +36,12 @@
     font-weight: 400;
     text-align: left;
 }
+
+.business .status{
+    bottom: 5px;
+    left: 5px;
+    padding: 2px 5px;
+}
 @media (max-width: 576px){
     .business{
         width: 100%;
@@ -55,6 +61,12 @@
     }
     .business .description{
         display: block;
+    }
+    .business .status{
+        bottom: 10px;
+        left: 15px;
+        padding: 4px 8px;
+        font-size: 13px;
     }
 }
 @media (min-width: 576px){

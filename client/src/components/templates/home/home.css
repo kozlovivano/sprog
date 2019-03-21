@@ -41,6 +41,11 @@
         margin-top: 20px;
         display: block;
     }
+    .businesses-portrait .result{
+        font-size: 30px;
+        text-align: center;
+        font-weight: 600;
+    }
 }
 @media (min-width: 576px){
     .businesses-portrait{

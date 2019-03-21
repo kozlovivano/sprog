@@ -43,6 +43,7 @@ class Home extends Component {
                     </OwlCarousel>
                 </div>
                 <div className="businesses-portrait container">
+                    <p className="result c-blue">Top picks</p>
                     { this.props.businesses.map(business => {
                         return <Business key={ this.props.businesses.indexOf(business) + 1 } business={ business }/>
                     }) }
