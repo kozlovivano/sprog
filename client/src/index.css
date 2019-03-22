@@ -20,7 +20,8 @@ body {
 	font-family: 'Eras Light ITC' !important;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: url("./assets/png/bg.png");
+    background: url("./assets/png/bg.png");
+    background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5{

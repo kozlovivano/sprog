@@ -31,3 +31,10 @@
 		margin: 0px !important;
 	}
 }
+
+/* Content */
+@media (max-width: 576px){
+	.content{
+		margin-bottom: 80px;
+	}
+}

@@ -1,0 +1,38 @@
+.question{
+    line-height: 40px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.question button{
+    border: 3px solid white;
+    border-radius: 50%;
+    line-height: 20px;
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    position: relative;
+}
+
+.question button p{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    font-weight: 800;
+    margin: 0;
+    left: 4px;
+    top: 4px;
+}
+
+.answer{
+    line-height: 40px;
+}
+
+.answer p{
+    margin: 0 5px 10px 20px;
+    background: rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+    border-radius: 10px;
+}

@@ -19,9 +19,9 @@ class Home extends Component {
                 <div className="container mt-5 home">
                     <div className="row">
                         <div className="col-md-6 text-center mt-4">
-                            <Counter placeholder="How much would you like to spend?"/>
-                            <Counter placeholder="How many children do you have?"/>
-                            <Position placeholder="Enter location/Geotag"/>
+                            <Counter placeholder="How much would you like to spend?" width={(this.props.windowWidth > 992) ? "60%": "95%"} marginBottom="10px"/>
+                            <Counter placeholder="How many children do you have?" width={(this.props.windowWidth > 992) ? "60%": "95%"} marginBottom="10px"/>
+                            <Position placeholder="Enter location/Geotag" width={(this.props.windowWidth > 992) ? "60%": "95%"} marginBottom="10px"/>
                             <button className="sprog-btn bg-blue">Sprog it</button>
                         </div>
                         <div className="col-md-6 text-center">

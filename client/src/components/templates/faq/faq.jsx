@@ -1,17 +1,30 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
+import Question from '../../fragments/faqs/question';
+import './faq.css';
 class Faq extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  };
-    }
     render() {
         return (
-            <div className="container">
-                <h1>FAQ's</h1>
+            <div className="container faq">
+                <h5 className="text-center mt-3 mb-3">A little lost? Hopefully you'll find the answers here. If not, please contact us directly. </h5>
+                <div className="accordion" id="qa">
+                    { 
+                        this.props.faqs.map(faq => {
+                            return <Question key={this.props.faqs.indexOf(faq)} faq={faq}/>
+                        }) 
+                    }
+                </div>
             </div>
         );
     }
 }
 
-export default Faq;
+const mapStateToProps = state => ({
+    ...state.faq
+});
+
+const mapDispatchToProps = dispatch => ({
+    
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Faq);

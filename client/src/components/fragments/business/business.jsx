@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Readmore from '../../utils/readmore';
-import './business.css';
+import './style.css';
 
 class business extends Component {
 
