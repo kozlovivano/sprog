@@ -10,7 +10,7 @@ class Footer extends Component {
                     lineHeight: "50px",
                     color: "#ffffff",
                     textAlign: "center",
-                    zIndex: "1",
+                    zIndex: "10",
                     fontWeight: "600",
                     position: "fixed",
                     bottom: "0",

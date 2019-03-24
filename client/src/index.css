@@ -14,7 +14,7 @@
     src: local('Yantiq'), url('./assets/fonts/Yantiq.woff') format('woff');
 }
 
-body {
+html, body, #root {
 	margin: 0;
 	padding: 0;
 	font-family: 'Eras Light ITC' !important;
@@ -27,7 +27,14 @@ body {
 h1, h2, h3, h4, h5{
     line-height: 1.3;
 }
-
+a{
+    cursor: pointer;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: #3ca7d5;
+}
 *:focus {
     outline: none;
 }
