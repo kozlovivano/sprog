@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Question from '../../fragments/faqs/question';
-import './faq.css';
+import './style.css';
 class Faq extends Component {
     render() {
         return (

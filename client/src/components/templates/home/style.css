@@ -1,4 +1,14 @@
+.home .button-group{
+    width: 60%;
+}
 .home .sprog-btn{
+    float: left !important;
+}
+.home .filter-btn{
+    float: right !important;
+}
+.home .sprog-btn, .home .filter-btn{
+    text-align: center;
     margin-top: 30px;
     color: #ffffff;
     font-size: 25px;
@@ -9,23 +19,26 @@
     box-shadow: 0px 0px 23px -8px rgba(0,0,0,0.75);
     font-weight: 600;
     transition: 0.4s;
+    width: 120px;
 }
-.home .sprog-btn:hover{
+.home .sprog-btn:hover, .home .filter-btn:hover{
     box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.75);
     transition: 0.4s;
 }
-.home .sprog-btn:focus{
+.home .sprog-btn:focus, .home .filter-btn:focus{
     outline: 0;
 }
+
 .businesses-landscape{
     margin-top: 20px;
     padding-top: 20px;
     background-color: #3ca7d5;
 }
 
-@media (min-width: 993px){
-    .home .sprog-btn{
-        margin-right: 40%;
+@media (max-width: 993px){
+    .home .button-group{
+        width: 95%;
+        margin: auto;
     }
 }
 @media (max-width: 768px){

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import './aboutus.css';
+import './style.css';
 
 class AboutUs extends Component {
     render() {

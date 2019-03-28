@@ -1,0 +1,18 @@
+.filter .price-range{
+    margin: auto;
+    margin-top: 80px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.filter .map{
+    margin: auto;
+    margin-top: 65px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (max-width: 576px){
+    .filter .map{
+        margin-top: 0px;
+    }
+}
