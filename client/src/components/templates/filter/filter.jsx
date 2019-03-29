@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import Search from '../../fragments/inputs/search';
@@ -28,14 +29,14 @@ class Filter extends Component {
                     <div className="col-lg-8">
                         <div className="row mt-3">
                             <div className="col-9"><Search placeholder="Enter keywords here..." width="100%" marginBottom="20px"/></div>
-                            <div className="col-3"><button className="btn bg-blue" style={{
+                            <div className="col-3"><Link to="/result" className="btn bg-blue" style={{
                                 color: "white",
                                 fontSize: "17px",
                                 fontWeight: "600",
                                 borderRadius: "7px",
                                 width: "100%",
                                 textAlign: "center"
-                            }}>Result</button></div>
+                            }}>Result</Link></div>
                             
                         </div>
                         <hr style={{marginTop: "-10px", borderTop: "2px solid rgba(0, 0, 0, 0.2)"}}/>
@@ -119,7 +120,7 @@ class Filter extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 d-md-none d-lg-block">
+                    <div className="col-lg-4">
                         <div className="map">
                             <Gmap/>
                         </div>

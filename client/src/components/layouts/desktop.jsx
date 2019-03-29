@@ -4,7 +4,7 @@ class Desktop extends Component {
     render() {
         return (
             <div 
-                className="bg-blue d-none d-sm-block" 
+                className="bg-blue d-none d-sm-none d-md-block" 
                 style={{
                     width: "100%",
                     position: "fixed",

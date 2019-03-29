@@ -41,15 +41,15 @@ class Home extends Component {
                         nav
                         items={ (this.props.windowWidth > 992) ? 4 : ((this.props.windowWidth < 768) ? 2 : 3) }
                     >
-                        { this.props.businesses.map(business => {
-                            return <Business key={ this.props.businesses.indexOf(business) + 1 } business={ business }/>
+                        { this.props.businesses.map((business, index) => {
+                            return <Business key={ index } business={ business }/>
                         }) }
                     </OwlCarousel>
                 </div>
                 <div className="businesses-portrait container">
                     <p className="result c-blue">Top picks</p>
-                    { this.props.businesses.map(business => {
-                        return <Business key={ this.props.businesses.indexOf(business) + 1 } business={ business }/>
+                    { this.props.businesses.map((business, index) => {
+                        return <Business key={ index } business={ business }/>
                     }) }
                 </div>
             </React.Fragment>
