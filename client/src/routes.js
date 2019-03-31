@@ -8,6 +8,7 @@ import Faq from './components/templates/faq/faq';
 import Login from './components/templates/auth/login';
 import Filter from './components/templates/filter/filter';
 import Result from './components/templates/results/result';
+import Detail from './components/templates/results/detail';
 
 export default(
     <React.Fragment>
@@ -18,5 +19,6 @@ export default(
         <Route path="/login" component={ Login } />
         <Route path="/filter" component={ Filter } />
         <Route path="/result" component={ Result } />
+        <Route path="/detail/:id" component={ Detail } />
     </React.Fragment>
 );

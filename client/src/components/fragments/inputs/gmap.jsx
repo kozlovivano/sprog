@@ -22,7 +22,7 @@ class Gmap extends Component {
             <MapWithAMarker
                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfIENl_GkKAeSI715vOLYnMwhPXs88td0&v=3.exp&libraries=geometry,drawing,places"
                 loadingElement={<div style={{ height: `100%` }} />}
-                containerElement={<div style={{ height: `570px`}} />}
+                containerElement={<div style={{ height: this.props.height}} />}
                 mapElement={<div style={{ height: `100%` }} />}
             />
         );

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import Readmore from '../../utils/readmore';
 import './style.css';
 
@@ -7,9 +8,9 @@ class business extends Component {
     render() {
         return (
             <div className="business item">
-                <p className="text">{ this.props.business.name }</p>
+                <Link to={"/detail/" + this.props.business.id}><p className="text">{ this.props.business.name }</p></Link>
                 <div className="position-relative">
-                    <img className="rounded-xl" src={ this.props.business.face } aria-hidden alt="Business face"/>
+                    <Link to={"/detail/" + this.props.business.id}><img className="rounded-xl" src={ this.props.business.face } aria-hidden alt="Business face"/></Link>
                     <p className="status position-absolute bg-blue rounded-sl text-white">{ this.props.business.status }</p>
                 </div>
                 <p className="text">Age range</p>

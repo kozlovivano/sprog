@@ -122,7 +122,7 @@ class Filter extends Component {
                     </div>
                     <div className="col-lg-4">
                         <div className="map">
-                            <Gmap/>
+                            <Gmap height="570px"/>
                         </div>
                     </div>
                 </div>
