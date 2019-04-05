@@ -43,7 +43,7 @@ class Filter extends Component {
                         
                         <div className="row mt-3 mb-3">
                             <div className="col-sm-6">
-                                <h5>Facilities</h5>
+                                <h5 style={{fontWeight: "700"}}>Facilities</h5>
                                 <div className="row">
                                     <div className="col-6">
                                         <Check label="Outdoor"/>
@@ -65,9 +65,9 @@ class Filter extends Component {
                                 </div>
                             </div>
                             <div className="col-sm-6">
-                                <h5>Age Range</h5>
+                                <h5 style={{fontWeight: "700"}}>Age Range</h5>
                                 <Age></Age>
-                                <h5 className="mt-3">Spending Range</h5>
+                                <h5 style={{fontWeight: "700"}} className="mt-3">Spending Range</h5>
                                 <Label text={"$" + this.state.sliderValues[0]} position="left"></Label>
                                 <Label text={"$" + this.state.sliderValues[1]} position="right"></Label>
                                 <div className="price-range">
@@ -82,7 +82,7 @@ class Filter extends Component {
                                 </div>
                             </div>
                         </div>
-                        <h5 className="mt-3 mb-3">Date & time</h5>
+                        <h5 style={{fontWeight: "700"}} className="mt-3 mb-3">Date & time</h5>
                         <div className="row ">
                             <div className="col-sm-6">
                                 <SprogDatepicker placeholder="Start date" width="100%" marginBottom="20px"/>
@@ -122,7 +122,7 @@ class Filter extends Component {
                     </div>
                     <div className="col-lg-4">
                         <div className="map">
-                            <Gmap height="570px"/>
+                            <Gmap height="560px"/>
                         </div>
                     </div>
                 </div>

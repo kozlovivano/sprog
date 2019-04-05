@@ -1,15 +1,13 @@
 .home .button-group{
-    width: 60%;
-}
-.home .sprog-btn{
-    float: left !important;
+    margin-top: 30px;
+    text-align: center;
+    width: 70%;
 }
 .home .filter-btn{
     float: right !important;
 }
 .home .sprog-btn, .home .filter-btn{
     text-align: center;
-    margin-top: 30px;
     color: #ffffff;
     font-size: 25px;
     font-family: 'Yantiq';
@@ -32,13 +30,13 @@
 .businesses-landscape{
     margin-top: 20px;
     padding-top: 20px;
-    background-color: #3ca7d5;
 }
 
 @media (max-width: 993px){
     .home .button-group{
-        width: 95%;
         margin: auto;
+        margin-top: 30px;
+        width: 100%;
     }
 }
 @media (max-width: 768px){

@@ -7,7 +7,9 @@ const initState = {
             age_range: ["B", "C", "D"],
             status: "Open now",
             distance: "3.42 km",
-            description: "Lorem ipsum dolor sit amet, dolorem eloquentiam pri te, ne malorum fabulas imperdiet ius. Qui ea nobis expetenda adversarium. Ancillae euripidis moderatius ad sit. Iudicabit splendide eu pri, affert albucius explicari in sed. Pri habeo omittam disputationi eu."
+            description: "Lorem ipsum dolor sit amet, dolorem eloquentiam pri te, ne malorum fabulas imperdiet ius. Qui ea nobis expetenda adversarium. Ancillae euripidis moderatius ad sit. Iudicabit splendide eu pri, affert albucius explicari in sed. Pri habeo omittam disputationi eu.",
+            price_adult: "$20",
+            price_child: "$10"
         },
         {
             id: 2,
@@ -16,7 +18,9 @@ const initState = {
             age_range: ["B", "C", "D"],
             status: "Open now",
             distance: "4.42 km",
-            description: "Lorem ipsum dolor sit amet, dolorem eloquentiam pri te, ne malorum fabulas imperdiet ius. Qui ea nobis expetenda adversarium. Ancillae euripidis moderatius ad sit. Iudicabit splendide eu pri, affert albucius explicari in sed. Pri habeo omittam disputationi eu."
+            description: "Lorem ipsum dolor sit amet, dolorem eloquentiam pri te, ne malorum fabulas imperdiet ius. Qui ea nobis expetenda adversarium. Ancillae euripidis moderatius ad sit. Iudicabit splendide eu pri, affert albucius explicari in sed. Pri habeo omittam disputationi eu.",
+            price_adult: "$20",
+            price_child: "$10"
         },
         {
             id: 3,
@@ -25,7 +29,9 @@ const initState = {
             age_range: ["B", "C", "D"],
             status: "Open now",
             distance: "5.42 km",
-            description: "Lorem ipsum dolor sit amet, dolorem eloquentiam pri te, ne malorum fabulas imperdiet ius. Qui ea nobis expetenda adversarium. Ancillae euripidis moderatius ad sit. Iudicabit splendide eu pri, affert albucius explicari in sed. Pri habeo omittam disputationi eu."
+            description: "Lorem ipsum dolor sit amet, dolorem eloquentiam pri te, ne malorum fabulas imperdiet ius. Qui ea nobis expetenda adversarium. Ancillae euripidis moderatius ad sit. Iudicabit splendide eu pri, affert albucius explicari in sed. Pri habeo omittam disputationi eu.",
+            price_adult: "$20",
+            price_child: "$10"
         },
         {
             id: 4,
@@ -34,7 +40,9 @@ const initState = {
             age_range: ["A", "B", "C", "D"],
             status: "Open now",
             distance: "6.42 km",
-            description: "Lorem ipsum dolor sit amet, dolorem eloquentiam pri te, ne malorum fabulas imperdiet ius. Qui ea nobis expetenda adversarium. Ancillae euripidis moderatius ad sit. Iudicabit splendide eu pri, affert albucius explicari in sed. Pri habeo omittam disputationi eu."
+            description: "Lorem ipsum dolor sit amet, dolorem eloquentiam pri te, ne malorum fabulas imperdiet ius. Qui ea nobis expetenda adversarium. Ancillae euripidis moderatius ad sit. Iudicabit splendide eu pri, affert albucius explicari in sed. Pri habeo omittam disputationi eu.",
+            price_adult: "$20",
+            price_child: "$10"
         },
     ]
 }

@@ -4,12 +4,12 @@
 }
 .result .map{
     margin: auto;
-    margin-top: 65px;
+    margin-top: 10px;
     border-radius: 10px;
     overflow: hidden;
 }
 .result .business-list{
-    height: 580px;
+    height: 510px;
     overflow: scroll;
     -ms-overflow-style: none;
 }
@@ -80,7 +80,7 @@
     border-radius: 7px;
 }
 .detail div.slider{
-    height: 300px;
+    height: 280px;
     border-bottom: 1px solid #bbbbbb;
 }
 .detail div.slider>div{
@@ -100,9 +100,16 @@
     position: absolute;
     top: 50px;
     border-radius: 20px;
+    width: 360px;
+    height: 220px;
 }
 .detail .thumbs-wrapper.axis-vertical img{
     border-radius: 7px;
+}
+
+.detail .contact{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 1200px) and (min-width: 768px){

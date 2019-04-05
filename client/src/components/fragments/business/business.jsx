@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import Readmore from '../../utils/readmore';
 import './style.css';
 
 class business extends Component {
@@ -8,7 +7,7 @@ class business extends Component {
     render() {
         return (
             <div className="business item">
-                <Link to={"/detail/" + this.props.business.id}><p className="text">{ this.props.business.name }</p></Link>
+                <Link to={"/detail/" + this.props.business.id}><p className="text">{ this.props.business.name + " (" + this.props.business.price_child + "~" + this.props.business.price_adult + ")"}</p></Link>
                 <div className="position-relative">
                     <Link to={"/detail/" + this.props.business.id}><img className="rounded-xl" src={ this.props.business.face } aria-hidden alt="Business face"/></Link>
                     <p className="status position-absolute bg-blue rounded-sl text-white">{ this.props.business.status }</p>
@@ -22,15 +21,8 @@ class business extends Component {
                 </div>
                 <p className="text">Distance</p>
                 <p className="text">{ this.props.business.distance }</p>
-                <div className="description">
-                    <Readmore
-                        className="read-more-content"
-                        charLimit={120}
-                        readMoreText="see more"
-                        readLessText="less"
-                    >
-                        { this.props.business.description }
-                    </Readmore>
+                <div className="price text-center">
+                    Child - {this.props.business.price_child}, Adult - {this.props.business.price_adult}
                 </div>
                 
             </div>

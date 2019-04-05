@@ -4,31 +4,35 @@
     border: 3px solid #888888;
     border-radius: 10px;
     text-align: left;
+    background: white;
+    position: relative;
 }
 .counter input{
     margin-left: 10px;
     border: none;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 35px;
     width: 75%;
-    background: transparent;
+    background: white;
 }
 
 .counter .control{
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .counter .control span{
     cursor: pointer;
-    font-size: 21.5px;
+    font-size: 25px;
     font-weight: 800;
-    color: black;
+    color: gray;
 }
 
 .counter .control span.minus{
-    padding-right: 10px;
-    margin-right: 10px;
+    padding-right: 14px;
+    margin-right: 14px;
     border-right: 1px solid #888888;
 }
 
@@ -42,16 +46,17 @@
     border: 3px solid #888888;
     border-radius: 10px;
     text-align: left;
+    background: white;
 }
 
 .position input{
     margin-left: 10px;
     border: none;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 35px;
     width: 75%;
-    background: transparent;
+    background: white;
 }
 
 .position .control{
@@ -60,9 +65,9 @@
 
 .position .control span{
     cursor: pointer;
-    font-size: 21.5px;
+    font-size: 25px;
     font-weight: 800;
-    margin-right: 25px;
+    margin-right: 11px;
 }
 
 /* Normal fragment */
@@ -70,16 +75,17 @@
     border: 3px solid #888888;
     border-radius: 10px;
     text-align: left;
+    background: white;
 }
 
 .normal input{
     margin-left: 10px;
     border: none;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 35px;
     width: 90%;
-    background: transparent;
+    background: white;
 }
 
 /* Text fragment */
@@ -87,6 +93,7 @@
     border: 3px solid #888888;
     border-radius: 10px;
     text-align: left;
+    background: white;
 }
 
 .textarea textarea{
@@ -95,7 +102,7 @@
     border: none;
     font-size: 15px;
     font-weight: 600;
-    background: transparent;
+    background: white;
 }
 
 /* Select fragment */
@@ -103,16 +110,17 @@
     border: 3px solid #888888;
     border-radius: 10px;
     text-align: left;
+    background: white;
 }
 
 .select select{
     margin-left: 10px;
     border: none;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 35px;
     width: 95%;
-    background: transparent;
+    background: white;
     height: 32px;
 }
 .select select option{
@@ -134,6 +142,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    background: white;
 }
   
   /* Hide the browser's default checkbox */
@@ -191,16 +200,17 @@
     border: 3px solid #888888;
     border-radius: 10px;
     text-align: left;
+    background: white;
 }
 
 .search input{
     margin-left: 10px;
     border: none;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 35px;
     width: 75%;
-    background: transparent;
+    background: white;
 }
 
 .search .control{
@@ -209,14 +219,16 @@
 
 .search .control span{
     cursor: pointer;
-    font-size: 21.5px;
+    font-size: 25px;
     font-weight: 800;
     margin-right: 15px;
+    color: gray;
 }
 
 /* Age fragment */
 .age{
     text-align: center;
+    background: white;
 }
 .age .year{
     width: 30px;
@@ -239,6 +251,7 @@
     line-height: 40px;
     border: 3px solid #888888;
     border-radius: 7px;
+    background: white;
 }
 
 
@@ -247,16 +260,17 @@
     border: 3px solid #888888;
     border-radius: 10px;
     text-align: left;
+    background: white;
 }
 
 .datepicker input{
     margin-left: 10px;
     border: none;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 35px;
     width: 95%;
-    background: transparent;
+    background: white;
 }
 
 .datepicker .control{
@@ -265,9 +279,10 @@
 
 .datepicker .control span{
     cursor: pointer;
-    font-size: 21.5px;
+    font-size: 25px;
     font-weight: 800;
     margin-right: 25px;
+    color: gray;
 }
 
 /* Timepicker fragment */
@@ -280,6 +295,7 @@
     line-height: 40px;
     border: 3px solid #888888;
     border-radius: 7px;
+    background: white;
 }
 .timepicker input{
     width: 60px;

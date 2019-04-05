@@ -2,7 +2,7 @@
     text-align: center;
     width: 220px;
     margin: 0 auto;
-    font-size: 10px;
+    font-size: 12px;
     color: #000000;
     font-weight: 600;
 }
@@ -20,6 +20,7 @@
     padding: 2px;
     color: #666666;
     font-weight: 700;
+    width: 45px;
     border: 2px solid #3ca7d5;
 }
 .business img{
@@ -31,9 +32,9 @@
     box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.75);
     transition: 0.4s;
 }
-.business .description{
+.business .price{
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 700;
     text-align: left;
 }
 
@@ -50,16 +51,17 @@
         margin-bottom: 20px;
     }
     .business .text{
-        font-size: 15px;
+        font-size: 18px;
     }
     .business img{
         width: 98%;
     }
     .business .age{
-        width: 40px;
+        width: 60px;
+        font-size: 16px;
         margin: 0 auto;
     }
-    .business .description{
+    .business .price{
         display: block;
     }
     .business .status{
@@ -70,7 +72,7 @@
     }
 }
 @media (min-width: 576px){
-    .business .description{
+    .business .price{
         display: none;
     }
 }

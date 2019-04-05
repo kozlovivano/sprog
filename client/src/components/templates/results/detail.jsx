@@ -21,7 +21,7 @@ class Detail extends Component {
                                     }}>{this.props.detail.name}</span>
                                 </h1>
                             </div>
-                            <div className="col-3 col-sm-3 col-md-2">
+                            <div className="col-3 col-sm-3 col-md-2 d-none d-sm-none d-md-block">
                                 <button className="btn bg-blue book">
                                     Book now
                                 </button>
@@ -97,27 +97,32 @@ class Detail extends Component {
                     </div>
                     <div className="col-lg-4 mt-3">
                         <div className="slider">
-                            <Carousel>
+                            <Carousel infiniteLoop={true} autoPlay={true}>
                                 {this.props.detail.face.map((item, index) => {
                                     return <div key={index}><img src={item} alt="Company face"/></div>
                                 })}
                             </Carousel>
                         </div>
-                        <div className="row">
-                            <div className="col-9 mt-1" style={{paddingRight: "5px"}}><Gmap height="140px"/></div>
-                            <div className="col-3" style={{paddingLeft: "0"}}>
+                        <div className="row contact">
+                            <div className="col-12 col-sm-10 mt-1"><Gmap height="220px"/></div>
+                            <div className="col-sm-2 d-none d-sm-block" style={{paddingLeft: "0"}}>
                                 <button className="btn mt-1" style={{
                                     width: "100%",
                                     background: "darkorange",
                                     color: "white"
-                                }}><i className="fa fa-star" style={{fontSize: "30px"}}></i></button>
+                                }}><i className="fa fa-star" style={{fontSize: "20px"}}></i></button>
                             </div>
                         </div>
                         <h4 style={{margin: "0"}}>Contact</h4>
-                        <div style={{borderBottom: "1px solid #bbbbbb"}}>
+                        <div style={{borderBottom: "1px solid #bbbbbb", paddingBottom: "20px"}}>
                             <p>{this.props.detail.contact.phone}</p>
                             <p>{this.props.detail.contact.email}</p>
                             <p>{this.props.detail.contact.site}</p>
+                        </div>
+                        <div className="row d-block d-sm-none">
+                            <div className="col-12">
+                                <button className="btn bg-blue w-100 mt-3" style={{color: "white", fontSize: "20px", fontWeight: "700"}}>Book now</button>
+                            </div>
                         </div>
                     </div>
                 </div>

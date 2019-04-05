@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
-
+import './style.css';
 class Footer extends Component {
     render() {
         return (
             <div 
-                className="bg-blue d-sm-none" 
+                className="bg-blue footer" 
                 style={{
                     width: "100%",
                     lineHeight: "50px",
                     color: "#ffffff",
                     textAlign: "center",
-                    zIndex: "10",
                     fontWeight: "600",
-                    position: "fixed",
-                    bottom: "0",
-                    boxShadow: "0px -2px 4px 0px rgba(0,0,0,0.45)"
+                    padding: "5px"
                 }}
             >
-                &copy;2019 Sprog project.
+                <p style={{lineHeight: "30px", fontSize: "15px", margin: "0", padding: "0"}}>&copy;2019 Sprog project.</p>
+                <p style={{lineHeight: "30px", fontSize: "15px", margin: "0", padding: "0"}}>You can visite business page and terms & policy.</p>
             </div>
         );
     }

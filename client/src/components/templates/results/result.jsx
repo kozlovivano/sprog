@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Desktop  from "../../layouts/desktop";
 import { Link } from "react-router-dom";
 import Businessbig from '../../fragments/business/businessbig';
 import Gmap from '../../fragments/inputs/gmap';
@@ -10,7 +9,7 @@ class Result extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="container result mb-5">
+                <div className="container result">
                     <div className="row">
                         <div className="col-lg-7 text-center mt-3">
                             <h2 className="c-blue">Results</h2>
@@ -24,12 +23,11 @@ class Result extends Component {
                         <div className="col-lg-1"></div>
                         <div className="col-lg-4">
                             <div className="map">
-                                <Gmap/>
+                                <Gmap height="560px"/>
                             </div>
                         </div>
                     </div>
                 </div>
-                <Desktop></Desktop>
             </React.Fragment>
         );
     }

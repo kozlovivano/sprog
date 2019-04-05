@@ -16,17 +16,7 @@
 }
 
 /* Navbar */
-.navbar{
-	z-index: 10;
-}
-.navbar .logo{
-	font-family: 'Yantiq';
-	font-weight: 600;
-}
-.navbar .navbar-nav .nav-item .nav-link{
-	font-size: 1.3em;
-	font-weight: 600;
-}
+
 
 @media (max-width: 576px){
 	.navbar .navbar-nav .nav-item{
@@ -36,9 +26,12 @@
 }
 
 /* Content */
-
+.content{
+	margin-top: 100px;
+	min-height: 528px;
+}
 @media (max-width: 576px){
 	.content{
-		margin-bottom: 80px;
+		margin-bottom: 30px;
 	}
 }

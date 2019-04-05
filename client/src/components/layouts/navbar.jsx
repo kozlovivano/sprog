@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import DrawerToggleBotton from './sidedrawer/DrawerToggleButton';
+import './style.css';
 class NavBar extends Component {
     render() {
         return (
             <React.Fragment>
-                <nav className="navbar navbar-expand-sm bg-blue navbar-dark">
+                {/* <nav className="navbar navbar-expand-sm bg-blue navbar-dark">
                     <Link className="navbar-brand" to="/"><h1 className="logo">Sprog</h1></Link>
                     <button 
                         className="navbar-toggler collapsed" 
@@ -31,7 +33,24 @@ class NavBar extends Component {
                             </li>
                         </ul>
                     </div>
-                </nav>
+                </nav> */}
+                <header className="toolbar">
+                    <nav className="toolbar__navigation">
+                        <div className="toolbar__logo"><Link to="/">Sprog</Link></div>
+                        <div className="spacer"></div>
+                        <div className="toolbar_navigation-items d-none d-sm-block">
+                            <ul>
+                                <li><Link to="/aboutus">About Us</Link></li>
+                                <li><Link to="/faq">FAQ's</Link></li>
+                                <li><Link to="/contactus">Contact Us</Link></li>
+                                <li><Link to="/login">Login</Link></li>
+                            </ul>
+                        </div>
+                        <div className="d-block d-sm-none mr-3">
+                            <DrawerToggleBotton status={this.props.sideState} click={this.props.drawerClickHandler}></DrawerToggleBotton>
+                        </div>
+                    </nav>
+                </header>
             </React.Fragment>
         );
     }

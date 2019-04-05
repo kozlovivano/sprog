@@ -8,7 +8,7 @@ import './style.css';
 class ContactUs extends Component {
     render() {
         return (
-            <div className="container contactus mt-5 mb-5">
+            <div className="container contactus">
                 <div className="row">
                     <div className="d-sm-none col-sm-6 mb-3">
                         <h1 className="text-center c-blue">Contact Us</h1>

@@ -6,11 +6,17 @@
 }
 .filter .map{
     margin: auto;
-    margin-top: 65px;
+    margin-top: 10px;
     border-radius: 10px;
     overflow: hidden;
 }
-
+@media (min-width: 992px){
+    .filter .map{
+        position: sticky;
+        width: 350px;
+        top: 85px;
+    }
+}
 @media (max-width: 576px){
     .filter .map{
         margin-top: 0px;

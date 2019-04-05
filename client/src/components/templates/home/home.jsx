@@ -17,19 +17,19 @@ class Home extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="container mt-5 home">
+                <div className="container home">
                     <div className="row">
                         <div className="col-md-6 mt-4">
-                            <Counter placeholder="How much would you like to spend?" width={(this.props.windowWidth > 992) ? "60%": "95%"} marginBottom="10px"/>
-                            <Counter placeholder="How many children do you have?" width={(this.props.windowWidth > 992) ? "60%": "95%"} marginBottom="10px"/>
-                            <Position placeholder="Enter location/Geotag" width={(this.props.windowWidth > 992) ? "60%": "95%"} marginBottom="10px"/>
+                            <Counter placeholder="How much would you like to spend?" width={(this.props.windowWidth > 992) ? "70%": "100%"} marginBottom="10px"/>
+                            <Counter placeholder="How many children do you have?" width={(this.props.windowWidth > 992) ? "70%": "100%"} marginBottom="10px"/>
+                            <Position placeholder="Enter location/Geotag" width={(this.props.windowWidth > 992) ? "70%": "100%"} marginBottom="10px"/>
                             <div className="button-group">
-                                <button className="sprog-btn bg-blue">Sprog it</button>
-                                <Link to="/filter" className="filter-btn bg-blue">Filter</Link>
+                                <Link to="/result" className="sprog-btn bg-blue">Sprog it</Link>
+                                {/* <Link to="/filter" className="filter-btn bg-blue">Filter</Link> */}
                             </div>
                         </div>
                         <div className="col-md-6 text-center">
-                            <iframe width="360" height="200" title="Our service" src="https://www.youtube-nocookie.com/embed/cMYasM_o2hU?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                            <iframe width="400" height="250" title="Our service" src="https://www.youtube-nocookie.com/embed/cMYasM_o2hU?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -37,8 +37,11 @@ class Home extends Component {
                     <OwlCarousel
                         className="owl-theme"
                         loop
+                        autoplay={true}
+                        autoplayTimeout={2000}
+                        autoplayHoverPause
                         margin={10}
-                        nav
+                        nav={true}
                         items={ (this.props.windowWidth > 992) ? 4 : ((this.props.windowWidth < 768) ? 2 : 3) }
                     >
                         { this.props.businesses.map((business, index) => {
