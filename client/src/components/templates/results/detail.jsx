@@ -65,7 +65,7 @@ class Detail extends Component {
                                         <h4 className="mt-1 text-left" style={{marginBottom: "10px"}}>Opening Hours</h4>
                                         <div>
                                             {this.props.detail.hours.map((item, index) => {
-                                                return <div className="row" key={index}>
+                                                return <div className="row working-time" key={index}>
                                                     <div className="col-3"><span>{item.day}</span></div>
                                                     <div className="col-1"><span>-</span></div>
                                                     <div className="col-7">{(item.open !== "-") ? <span>{item.open + "-" + item.close}</span> : "Closed"}</div>

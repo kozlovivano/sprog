@@ -169,4 +169,11 @@
         width: 72px;
         right: 15px;
     }
+    .detail .working-time{
+        font-size: 12px;
+    }
+    .detail .working-time div{
+        padding: 0px;
+        text-align: right;
+    }
 }
