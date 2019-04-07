@@ -295,7 +295,6 @@
     line-height: 40px;
     border: 3px solid #888888;
     border-radius: 7px;
-    background: white;
 }
 .timepicker input{
     width: 60px;
@@ -307,7 +306,7 @@
 
 @media (max-width: 992px){
     .counter, .position, .normal, .search, .datepicker{
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
         margin-bottom: 15px;
     }
@@ -318,5 +317,11 @@
     }
     .age .year{
         margin: 5px 0px;
+    }
+}
+
+@media (max-width: 360px){
+    .counter input, .position input{
+        font-size: 12px;
     }
 }

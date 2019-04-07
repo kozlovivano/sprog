@@ -10,6 +10,9 @@
     border-radius: 10px;
     overflow: hidden;
 }
+.filter .filter-btn{
+    width: 100%;
+}
 @media (min-width: 992px){
     .filter .map{
         position: sticky;
@@ -20,5 +23,9 @@
 @media (max-width: 576px){
     .filter .map{
         margin-top: 0px;
+    }
+    .filter .filter-btn{
+        width: 64px;
+        margin-left: -15px;
     }
 }

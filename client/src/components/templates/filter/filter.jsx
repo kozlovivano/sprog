@@ -29,12 +29,11 @@ class Filter extends Component {
                     <div className="col-lg-8">
                         <div className="row mt-3">
                             <div className="col-9"><Search placeholder="Enter keywords here..." width="100%" marginBottom="20px"/></div>
-                            <div className="col-3"><Link to="/result" className="btn bg-blue" style={{
+                            <div className="col-3"><Link to="/result" className="btn bg-blue filter-btn" style={{
                                 color: "white",
                                 fontSize: "17px",
                                 fontWeight: "600",
                                 borderRadius: "7px",
-                                width: "100%",
                                 textAlign: "center"
                             }}>Result</Link></div>
                             

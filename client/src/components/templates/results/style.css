@@ -165,4 +165,8 @@
     .detail .age_range .age:last-child{
         margin: 0;
     }
+    .result .filter-btn{
+        width: 72px;
+        right: 15px;
+    }
 }
