@@ -85,13 +85,13 @@ class Filter extends Component {
                         <div className="row ">
                             <div className="col-sm-6">
                                 <SprogDatepicker placeholder="Start date" width="100%" marginBottom="20px"/>
-                                <SprogTimepicker text="00:00" position="left"/>
-                                <SprogTimepicker text="00:00" position="right"/>
+                                <SprogTimepicker placeholder="00:00" position="left"/>
+                                <SprogTimepicker placeholder="00:00" position="right"/>
                             </div>
                             <div className="col-sm-6">
                                 <SprogDatepicker placeholder="End date" width="100%" marginBottom="20px"/>
-                                <SprogTimepicker text="00:00" position="left"/>
-                                <SprogTimepicker text="00:00" position="right"/>
+                                <SprogTimepicker placeholder="00:00" position="left"/>
+                                <SprogTimepicker placeholder="00:00" position="right"/>
                             </div>
                         </div>
                         <hr style={{marginTop: "0px", borderTop: "2px solid rgba(0, 0, 0, 0.2)"}}/>
