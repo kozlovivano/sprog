@@ -111,7 +111,8 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+@media (max-width: 992px){
+}
 @media (max-width: 1200px) and (min-width: 768px){
     .detail .age_range .age{
         margin-right: 20px;

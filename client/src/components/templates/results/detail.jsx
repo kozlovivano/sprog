@@ -41,6 +41,13 @@ class Detail extends Component {
                                         }</span>
                                     })}
                                 </div>
+                                <div className="slider d-show d-sm-none mt-5">
+                                    <Carousel infiniteLoop={true} autoPlay={true}>
+                                        {this.props.detail.face.map((item, index) => {
+                                            return <div key={index}><img src={item} alt="Company face"/></div>
+                                        })}
+                                    </Carousel>
+                                </div>
                                 <h4 className="mt-1" style={{marginBottom: "0"}}>Facilities</h4>
                                 <div className="facilities" style={{
                                     paddingBottom: "10px",
@@ -96,7 +103,7 @@ class Detail extends Component {
                         </div>
                     </div>
                     <div className="col-lg-4 mt-3">
-                        <div className="slider">
+                        <div className="slider d-none d-sm-block">
                             <Carousel infiniteLoop={true} autoPlay={true}>
                                 {this.props.detail.face.map((item, index) => {
                                     return <div key={index}><img src={item} alt="Company face"/></div>
