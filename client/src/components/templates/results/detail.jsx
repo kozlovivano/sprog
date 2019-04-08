@@ -29,6 +29,13 @@ class Detail extends Component {
                         </div>
                         <div className="row mt-1">
                             <div className="col-sm-6">
+                                <div className="slider d-show d-sm-none mt-3">
+                                    <Carousel infiniteLoop={true} autoPlay={true}>
+                                        {this.props.detail.face.map((item, index) => {
+                                            return <div key={index}><img src={item} alt="Company face"/></div>
+                                        })}
+                                    </Carousel>
+                                </div>
                                 <h4>Age Range</h4>
                                 <div className="age_range mt-3" style={{
                                     paddingBottom: "10px",
@@ -40,13 +47,6 @@ class Detail extends Component {
                                             age === "A" ? "0 - 3" : (age === "B" ? "4 - 7" : (age === "C" ? "8 - 11" : "12 - 15"))
                                         }</span>
                                     })}
-                                </div>
-                                <div className="slider d-show d-sm-none mt-5">
-                                    <Carousel infiniteLoop={true} autoPlay={true}>
-                                        {this.props.detail.face.map((item, index) => {
-                                            return <div key={index}><img src={item} alt="Company face"/></div>
-                                        })}
-                                    </Carousel>
                                 </div>
                                 <h4 className="mt-1" style={{marginBottom: "0"}}>Facilities</h4>
                                 <div className="facilities" style={{
