@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { FacebookLoginButton } from "react-social-login-buttons";
 import { GoogleLoginButton } from "react-social-login-buttons";
 
-import Normal from '../../fragments/inputs/normal';
-import Check from '../../fragments/inputs/check';
+import Normal from '../../../fragments/inputs/normal';
+import Check from '../../../fragments/inputs/check';
 import './style.css';
 class Login extends Component {
     state = {

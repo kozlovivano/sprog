@@ -32,7 +32,7 @@
     display: flex;
 }
 .toolbar_navigation-items ul li{
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     font-size: 18px;
     font-weight: 600;
 }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Normal from '../../fragments/inputs/normal';
-import Text from '../../fragments/inputs/text';
-import Select from '../../fragments/inputs/select';
+import Normal from '../../../fragments/inputs/normal';
+import Text from '../../../fragments/inputs/text';
+import Select from '../../../fragments/inputs/select';
 import './style.css';
 class ContactUs extends Component {
     render() {

@@ -7,10 +7,18 @@ class Check extends Component {
             marginBottom: this.props.marginBottom
         }
         return (
-            <label htmlFor="Checkbox" className="check" style={ style }>{this.props.label}
-                <input type="checkbox"></input>
-                <span className="checkmark"></span>
-            </label>
+            <React.Fragment>
+                {this.props.label && <label htmlFor="Checkbox" className="check" style={ style }>{this.props.label}
+                    <input type="checkbox"></input>
+                    <span className="checkmark"></span>
+                </label>}
+                {!this.props.label && <React.Fragment>
+                    <label className="check_without_label">
+                        <input type="checkbox"></input>
+                        <span className="checkmark"></span>
+                    </label>
+                </React.Fragment>}
+            </React.Fragment>
         );
     }
 }

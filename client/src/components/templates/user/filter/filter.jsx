@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
-import Search from '../../fragments/inputs/search';
-import Check from '../../fragments/inputs/check';
-import Age from '../../fragments/inputs/age';
-import Counter from '../../fragments/inputs/counter';
-import Label from '../../fragments/inputs/label';
-import SprogDatepicker from '../../fragments/inputs/datepicker';
-import SprogTimepicker from '../../fragments/inputs/timepicker';
-import Gmap from '../../fragments/inputs/gmap';
+import Search from '../../../fragments/inputs/search';
+import Check from '../../../fragments/inputs/check';
+import Age from '../../../fragments/inputs/age';
+import Counter from '../../../fragments/inputs/counter';
+import Label from '../../../fragments/inputs/label';
+import SprogDatepicker from '../../../fragments/inputs/datepicker';
+import SprogTimepicker from '../../../fragments/inputs/timepicker';
+import Gmap from '../../../fragments/inputs/gmap';
 import './style.css';
 
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
@@ -29,7 +29,7 @@ class Filter extends Component {
                     <div className="col-lg-8">
                         <div className="row mt-3">
                             <div className="col-9"><Search placeholder="Enter keywords here..." width="100%" marginBottom="20px"/></div>
-                            <div className="col-3"><Link to="/result" className="btn bg-blue filter-btn" style={{
+                            <div className="col-3"><Link to="/user/result" className="btn bg-blue filter-btn" style={{
                                 color: "white",
                                 fontSize: "17px",
                                 fontWeight: "600",
@@ -94,7 +94,7 @@ class Filter extends Component {
                                 <SprogTimepicker placeholder="00:00" position="right"/>
                             </div>
                         </div>
-                        <hr style={{marginTop: "0px", borderTop: "2px solid rgba(0, 0, 0, 0.2)"}}/>
+                        <hr style={{marginTop: "10px", borderTop: "2px solid rgba(0, 0, 0, 0.2)"}}/>
                         <div className="row">
                             <div className="col-sm-6">
                                 <button className="btn bg-blue" style={{

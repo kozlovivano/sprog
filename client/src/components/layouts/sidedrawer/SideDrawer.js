@@ -1,21 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react'
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 import './style.css';
-const sideDrawer = props => {
-    let drawerClasses = 'side-drawer';
-    if(props.show){
-        drawerClasses = 'side-drawer open';
-    }
-    return (
-        <nav className={drawerClasses}>
-            <ul>
-                <li><Link to="/aboutus">About Us</Link></li>
-                <li><Link to="/faq">FAQ's</Link></li>
-                <li><Link to="/contactus">Contact Us</Link></li>
-                <li><Link to="/login">Login</Link></li>
-            </ul>
-        </nav>
-    )
-};
 
-export default sideDrawer;
+class SideDrawer extends Component {
+    render() {
+        let drawerClasses = 'side-drawer';
+        if(this.props.show){
+            drawerClasses = 'side-drawer open';
+        }
+        return (
+            <React.Fragment>
+                <nav className={drawerClasses}>
+                    <ul>
+                    {
+                        this.props.common.user_mode && 
+                        <React.Fragment>
+                            <li><Link to="/business">Business</Link></li>
+                            <li><Link to="/user/aboutus">About Us</Link></li>
+                            <li><Link to="/user/faq">FAQ's</Link></li>
+                            <li><Link to="/user/contactus">Contact Us</Link></li>
+                            <li><Link to="/user/login">Login</Link></li>
+                        </React.Fragment>
+                    }
+                    {
+                        this.props.common.business_mode && 
+                        <React.Fragment>
+                            <li><Link to="/user">User</Link></li>
+                            <li><Link to="/business/account">Account settings</Link></li>
+                            <li><Link to="/business/mission">Our mission</Link></li>
+                            <li><Link to="/business/home">Login</Link></li>
+                        </React.Fragment>
+                    }
+                    </ul>
+                </nav>
+            </React.Fragment>
+        );
+    }
+}
+
+const mapStateToProps = state => ({
+    ...state
+});
+
+const mapDispatchToProps = dispatch => ({
+    
+});
+export default connect(mapStateToProps, mapDispatchToProps)(SideDrawer);

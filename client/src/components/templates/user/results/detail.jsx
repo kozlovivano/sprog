@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import Gmap from '../../fragments/inputs/gmap';
+import Gmap from '../../../fragments/inputs/gmap';
 class Detail extends Component {
     render() {
-        console.log(this.props);
         return (
             <div className="detail container">
                 <div className="row">

@@ -8,7 +8,7 @@ class AboutUs extends Component {
         const storyList = this.props.stories.map(story => (
             <div className="story" key={ story.id }>
                 <img className="rounded-sl" src={ story.img } aria-hidden alt="This is alt for about us image"/>
-                <h3 className="c-blue text-center mb-4">{ story.title }</h3>
+                <h3 className="c-blue text-center mb-4" style={{fontWeight: '600'}}>{ story.title }</h3>
                 <div className="mb-5">
                     { story.content.map(val => (<h4 key={story.content.indexOf(val) + 1}>&nbsp;{val}</h4>)) }
                 </div>

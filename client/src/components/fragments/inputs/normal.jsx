@@ -11,6 +11,7 @@ class Normal extends Component {
                 <input 
                     type={this.props.type} 
                     placeholder={this.props.placeholder}
+                    style={{textAlign: this.props.textAlign}}
                 />
             </div>
         );

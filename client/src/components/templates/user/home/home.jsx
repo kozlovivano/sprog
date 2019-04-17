@@ -7,13 +7,19 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-import Counter from '../../fragments/inputs/counter';
-import Position from '../../fragments/inputs/position';
-import Business from '../../fragments/business/business';
+import Counter from '../../../fragments/inputs/counter';
+import Position from '../../../fragments/inputs/position';
+import Business from '../../../fragments/business/business';
 
 import './style.css';
+import { USER_MODE } from '../../../../redux/constants/actionTypes';
 class Home extends Component {
-    
+    componentWillMount(){
+		this.props.onLoad();
+    }
+    componentWillUnmount(){
+        
+    }
     render() {
         return (
             <React.Fragment>
@@ -24,12 +30,11 @@ class Home extends Component {
                             <Counter placeholder="How many children do you have?" width={(this.props.windowWidth > 992) ? "70%": "100%"} marginBottom="10px"/>
                             <Position placeholder="Enter location/Geotag" width={(this.props.windowWidth > 992) ? "70%": "100%"} marginBottom="10px"/>
                             <div className="button-group">
-                                <Link to="/result" className="sprog-btn bg-blue">Sprog it</Link>
-                                {/* <Link to="/filter" className="filter-btn bg-blue">Filter</Link> */}
+                                <Link to="/user/result" className="sprog-btn bg-blue">Sprog it</Link>
                             </div>
                         </div>
                         <div className="col-md-6 text-center">
-                            <iframe width="400" height="250" title="Our service" src="https://www.youtube-nocookie.com/embed/cMYasM_o2hU?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                            <iframe width="400" height="250" title="Our service" src="https://www.youtube-nocookie.com/embed/A55YtAKsQW8?rel=1&amp;controls=1&amp;showinfo=0&amp;autoplay=1" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -44,14 +49,14 @@ class Home extends Component {
                         nav={true}
                         items={ (this.props.windowWidth > 992) ? 4 : ((this.props.windowWidth < 768) ? 2 : 3) }
                     >
-                        { this.props.businesses.map((business, index) => {
+                        { this.props.home.businesses.map((business, index) => {
                             return <Business key={ index } business={ business }/>
                         }) }
                     </OwlCarousel>
                 </div>
                 <div className="businesses-portrait container">
                     <p className="result c-blue">Top picks</p>
-                    { this.props.businesses.map((business, index) => {
+                    { this.props.home.businesses.map((business, index) => {
                         return <Business key={ index } business={ business }/>
                     }) }
                 </div>
@@ -61,11 +66,12 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => ({
-    ...state.home
+    ...state
 });
 
 const mapDispatchToProps = dispatch => ({
-    
+    onLoad: () => 
+		dispatch({ type: USER_MODE })
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(windowSize(Home));

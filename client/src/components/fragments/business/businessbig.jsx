@@ -8,9 +8,9 @@ class Businessbig extends Component {
     render() {
         return (
             <div className="business-big item">
-                <Link to={"/detail/" + this.props.business.id}><p className="text">{ this.props.business.name }</p></Link>
+                <Link to={"/user/detail/" + this.props.business.id}><p className="text">{ this.props.business.name }</p></Link>
                 <div className="position-relative">
-                    <Link to={"/detail/" + this.props.business.id}><img className="rounded-xl" src={ this.props.business.face } aria-hidden alt="Business face"/></Link>
+                    <Link to={"/user/detail/" + this.props.business.id}><img className="rounded-xl" src={ this.props.business.face } aria-hidden alt="Business face"/></Link>
                     <p className="status position-absolute bg-blue rounded-sl text-white">{ this.props.business.status }</p>
                 </div>
                 <p className="text">Age range</p>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
-import Businessbig from '../../fragments/business/businessbig';
-import Gmap from '../../fragments/inputs/gmap';
+import Businessbig from '../../../fragments/business/businessbig';
+import Gmap from '../../../fragments/inputs/gmap';
 import './style.css';
 
 class Result extends Component {
@@ -13,7 +13,7 @@ class Result extends Component {
                     <div className="row">
                         <div className="col-lg-7 text-center mt-3">
                             <h2 className="c-blue">Results</h2>
-                            <Link to="/filter" className="bg-blue btn filter-btn">Filter</Link>
+                            <Link to="/user/filter" className="bg-blue btn filter-btn">Filter</Link>
                             <div className="business-list">
                                 { this.props.businesses.map((business, index) => {
                                     return <Businessbig key={ index } business={ business }/>

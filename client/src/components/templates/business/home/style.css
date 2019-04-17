@@ -1,0 +1,21 @@
+.business_home{
+    position: relative;
+}
+.business_home a{
+    width: 80%;
+    margin: 15px 0px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    border-radius: 8px;
+}
+.business_home .logo{
+    position: absolute;
+    right: 15px;
+    top: -10px;
+}
+@media (max-width: 576px){
+    .business_home a{
+        width: 100%;
+    }
+}

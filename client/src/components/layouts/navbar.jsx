@@ -1,49 +1,41 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 import DrawerToggleBotton from './sidedrawer/DrawerToggleButton';
 import './style.css';
 class NavBar extends Component {
     render() {
         return (
             <React.Fragment>
-                {/* <nav className="navbar navbar-expand-sm bg-blue navbar-dark">
-                    <Link className="navbar-brand" to="/"><h1 className="logo">Sprog</h1></Link>
-                    <button 
-                        className="navbar-toggler collapsed" 
-                        type="button" data-toggle="collapse" 
-                        data-target="#navbarCollapse" aria-controls="navbarCollapse" 
-                        aria-expanded="false" 
-                        aria-label="Toggle navigation"
-                    >
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="navbar-collapse collapse" id="navbarCollapse">
-                        <ul className="navbar-nav ml-auto">
-                            <li className="nav-item mr-3">
-                                <Link className="nav-link" to="/aboutus">About Us</Link>
-                            </li>
-                            <li className="nav-item mr-3">
-                                <Link className="nav-link" to="/faq">FAQ's</Link>
-                            </li>
-                            <li className="nav-item mr-3">
-                                <Link className="nav-link" to="/contactus">Contact Us</Link>
-                            </li>
-                            <li className="nav-item mr-5">
-                                <Link className="nav-link" to="/login">Login</Link>
-                            </li>
-                        </ul>
-                    </div>
-                </nav> */}
                 <header className="toolbar">
                     <nav className="toolbar__navigation">
-                        <div className="toolbar__logo"><Link to="/">Sprog</Link></div>
+                        <div className="toolbar__logo">
+                            {this.props.common.user_mode && <Link to="/">Sprog</Link>}
+                            {this.props.common.business_mode && <Link to="/business">Sprog</Link>}
+                        </div>
+                        {this.props.common.business_mode && <h5 style={{color: 'white', position: 'absolute', left: '130px'}}>Business</h5>}
                         <div className="spacer"></div>
                         <div className="toolbar_navigation-items d-none d-sm-block">
                             <ul>
-                                <li><Link to="/aboutus">About Us</Link></li>
-                                <li><Link to="/faq">FAQ's</Link></li>
-                                <li><Link to="/contactus">Contact Us</Link></li>
-                                <li><Link to="/login">Login</Link></li>
+                                {
+                                    this.props.common.user_mode && 
+                                    <React.Fragment>
+                                        <li><Link to="/business">Business</Link></li>
+                                        <li><Link to="/user/aboutus">About Us</Link></li>
+                                        <li><Link to="/user/faq">FAQ's</Link></li>
+                                        <li><Link to="/user/contactus">Contact Us</Link></li>
+                                        <li><Link to="/user/login">Login</Link></li>
+                                    </React.Fragment>
+                                }
+                                {
+                                    this.props.common.business_mode && 
+                                    <React.Fragment>
+                                        <li><Link to="/user">User</Link></li>
+                                        <li><Link to="/business/account">Account settings</Link></li>
+                                        <li><Link to="/business/mission">Our mission</Link></li>
+                                        <li><Link to="/business/home">Login</Link></li>
+                                    </React.Fragment>
+                                }
                             </ul>
                         </div>
                         <div className="d-block d-sm-none mr-3">
@@ -55,5 +47,11 @@ class NavBar extends Component {
         );
     }
 }
+const mapStateToProps = state => ({
+    ...state
+});
 
-export default NavBar;
+const mapDispatchToProps = dispatch => ({
+    
+});
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

@@ -84,8 +84,8 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 30px;
-    width: 90%;
-    background: white;
+    width: 80%;
+    background: transparent;
 }
 
 /* Text fragment */
@@ -144,9 +144,22 @@
     user-select: none;
     background: white;
 }
+.check_without_label {
+    width: 20px;
+    position: relative;
+    padding-left: 35px;
+    margin: auto;
+    margin-bottom: 12px;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: white;
+}
   
   /* Hide the browser's default checkbox */
-.check input {
+.check input, .check_without_label input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -177,12 +190,12 @@
 }
   
   /* Show the checkmark when checked */
-.check input:checked ~ .checkmark:after {
+.check input:checked ~ .checkmark:after, .check_without_label input:checked ~ .checkmark:after{
     display: block;
 }
   
   /* Style the checkmark/indicator */
-.check .checkmark:after {
+.check .checkmark:after, .check_without_label .checkmark:after {
     left: 9px;
     top: 5px;
     width: 5px;
@@ -274,7 +287,9 @@
 }
 
 .datepicker .control{
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 4px;
 }
 
 .datepicker .control span{
@@ -287,7 +302,6 @@
 
 /* Timepicker fragment */
 .timepicker{
-    margin: 10px 0px;
     width: 80px;
     height: 40px;
     font-size: 15px;

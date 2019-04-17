@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Question from '../../fragments/faqs/question';
+import Question from '../../../fragments/faqs/question';
 import './style.css';
 class Faq extends Component {
     render() {
