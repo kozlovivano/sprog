@@ -15,10 +15,7 @@ class businessHome extends Component {
     render() {
         return (
             <div className="container business_home">
-                <h2 style={{
-                    fontWeight: '600',
-                    padding: '30px 0px 10px 0px'
-                }}>Business name here</h2>
+                <h2 className="title">Business name here</h2>
                 <div className="row">
                     <div className="col-sm-6">
                         <Link className="btn bg-blue" to="/business/account">Account Settings</Link>
