@@ -29,15 +29,14 @@ class businessHome extends Component {
                         <div className="row">
                             {this.props.business.entries.map((item, index) => {
                                 return (
-                                    <div className="col-4" key={index} style={{position: 'relative'}}>
-                                        <img style={{borderRadius: '8px'}} src={item.img} width="100%" height="200" aria-hidden alt="Entries"/>
+                                    <div className="col-6 col-sm-4" key={index} style={{position: 'relative'}}>
+                                        <img style={{borderRadius: '8px', marginTop: '10px'}} src={item.img} width="100%" height="150" aria-hidden alt="Entries"/>
                                         <div style={{
                                             position: 'absolute', 
-                                            width: '130px', 
+                                            width: '85%', 
                                             height: '30px', 
                                             bottom: '0', 
-                                            left: '15px', 
-                                            background: 'rgba(255, 255, 255, 0.2)',
+                                            left: '15px',
                                             borderBottomLeftRadius: '8px',
                                             borderBottomRightRadius: '8px'
                                         }}>
