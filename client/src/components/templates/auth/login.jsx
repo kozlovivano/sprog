@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { FacebookLoginButton } from "react-social-login-buttons";
 import { GoogleLoginButton } from "react-social-login-buttons";
-
-import Normal from '../../../fragments/inputs/normal';
-import Check from '../../../fragments/inputs/check';
+import { connect } from 'react-redux';
+import Normal from '../../fragments/inputs/normal';
+import Check from '../../fragments/inputs/check';
 import './style.css';
 class Login extends Component {
     state = {
@@ -38,7 +38,8 @@ class Login extends Component {
                                                 <Normal type="email" placeholder="Email" width="95%" marginBottom="30px"/>
                                                 <Normal type="password" placeholder="Password" width="95%" marginBottom="30px"/>
                                                 <Check label="Remember me" width="95%" marginBottom="30px"/>
-                                                <button className="login-button btn bg-blue" style={{fontWeight: "700"}}>Log in</button>
+                                                {this.props.common.business_mode && <Link to="/business/home" className="login-button btn bg-blue" style={{fontWeight: "700"}}>Log in</Link>}
+                                                {this.props.common.user_mode && <Link to="/" className="login-button btn bg-blue" style={{fontWeight: "700"}}>Log in</Link>}
                                                 <Link to="/"><p className="text-center mt-3" style={{fontSize: "20px"}}>Forgot login details? </p></Link>
                                             </React.Fragment>
                                             : 
@@ -81,5 +82,11 @@ class Login extends Component {
         );
     }
 }
+const mapStateToProps = state => ({
+    ...state
+});
 
-export default Login;
+const mapDispatchToProps = dispatch => ({
+
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

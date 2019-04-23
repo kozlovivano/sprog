@@ -5,7 +5,7 @@ import Home from './components/templates/user/home/home';
 import AboutUs from './components/templates/user/aboutus/aboutus';
 import ContactUs from './components/templates/user/contactus/contactus';
 import Faq from './components/templates/user/faq/faq';
-import Login from './components/templates/user/auth/login';
+import Login from './components/templates/auth/login';
 import Filter from './components/templates/user/filter/filter';
 import Result from './components/templates/user/results/result';
 import Detail from './components/templates/user/results/detail';
@@ -36,7 +36,7 @@ export default(
             <Route path="/business/home" component={ BusinessHome } />
             <Route path="/business/entry" component={ Entry } />
             <Route path="/business/new" component={ NewEntry } />
-
+            <Route path="/business/login" component={ Login } />
             <Route component={ Home }/>
         </Switch>
     </React.Fragment>

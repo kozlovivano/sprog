@@ -29,7 +29,7 @@ class SideDrawer extends Component {
                             <li><Link to="/user">User</Link></li>
                             <li><Link to="/business/account">Account settings</Link></li>
                             <li><Link to="/business/mission">Our mission</Link></li>
-                            <li><Link to="/business/home">Login</Link></li>
+                            <li><Link to="/business/login">Login</Link></li>
                         </React.Fragment>
                     }
                     </ul>

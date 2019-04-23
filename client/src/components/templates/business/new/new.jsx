@@ -7,11 +7,18 @@ import Check from '../../../fragments/inputs/check';
 import SprogDatepicker from '../../../fragments/inputs/datepicker';
 import SprogTimepicker from '../../../fragments/inputs/timepicker';
 import { BUSINESS_MODE } from '../../../../redux/constants/actionTypes';
+import { ADD_CHILD_ADDMISSION } from '../../../../redux/constants/actionTypes';
+
 import './style.css';
+
 class newEntry extends Component {
+    
     componentWillMount(){
 		this.props.onLoad();
-	}
+    }
+    add_child_addmission(props){
+        props.addChildAddmission();
+    }
     render() {
         return (
             <div className="container">
@@ -20,19 +27,19 @@ class newEntry extends Component {
                     <div className="col-md-6">
                         <Normal type="text" placeholder="Business Name" width="100%" marginBottom="20px"/>
                         <Text placeholder="Description" rows="6" width="100%" marginBottom="30px"/>
-                        
-                        <h4>Child Addmission</h4>
+                        <h4>Child Addmission <i onClick={() => this.add_child_addmission(this.props)} className="fa fa-plus-circle c-blue" style={{fontSize: "30px", marginLeft: "10px"}}></i></h4>
                         <div className="row">
                             <div className="col-3"><h5>Price</h5></div>
                             <div className="col-9"><h5>Age range</h5></div>
                         </div>
-                        <div className="row">
-                            <div className="col-3"><Normal type="text" placeholder="$0.00" width="100%" marginBottom="20px"/></div>
-                            <div className="col-3"><Normal type="text" placeholder="--" width="100%" marginBottom="20px" textAlign="center"/></div>
-                            <div className="col-3">To</div>
-                            <div className="col-3"><Normal type="text" placeholder="--" width="100%" marginBottom="20px" textAlign="center"/></div>
-                        </div>
-                        
+                        {this.props.business.count_child_addmission.map((item, index) => 
+                            <div className="row" key={index}>
+                                <div className="col-3"><Normal type="text" placeholder="$0.00" width="100%" marginBottom="20px"/></div>
+                                <div className="col-3"><Normal type="text" placeholder="--" width="100%" marginBottom="20px" textAlign="center"/></div>
+                                <div className="col-3">To</div>
+                                <div className="col-3"><Normal type="text" placeholder="--" width="100%" marginBottom="20px" textAlign="center"/></div>
+                            </div>
+                        )}
                         <h4>Adult Addmission</h4>
                         <div className="row">
                             <div className="col-3"><h5>Price</h5></div>
@@ -66,20 +73,24 @@ class newEntry extends Component {
                             <div className="row mb-2" key={index}>
                                 <div className="col-3" style={{lineHeight: '35px', fontSize: '18px'}}>{day}</div>
                                 <div className="col-3"><Check width="100%" marginBottom="30px"/></div>
-                                <div className="col-3"><SprogTimepicker placeholder="00:00" position="left"/></div>
-                                <div className="col-3"><SprogTimepicker placeholder="00:00" position="left"/></div>
+                                <div className="col-3"><SprogTimepicker position="left"/></div>
+                                <div className="col-3"><SprogTimepicker position="left"/></div>
                             </div>
                         )}
                         <h4 className="mt-4">Special Event</h4>
                         <div className="row">
                             <div className="col-3"><h5>Enable</h5></div>
-                            <div className="col-6"><h5>Date</h5></div>
-                            <div className="col-3"><h5>Time</h5></div>
+                            <div className="col-9"><h5>Start/End date and time</h5></div>
                         </div>
                         <div className="row">
                             <div className="col-3"><Check width="100%" marginBottom="30px"/></div>
-                            <div className="col-6"><SprogDatepicker placeholder="Click to enter date" width="100%" marginBottom="20px"/></div>
-                            <div className="col-3"><SprogTimepicker placeholder="00:00" position="left"/></div>
+                            <div className="col-6"><SprogDatepicker placeholder="Start date" width="100%" marginBottom="20px"/></div>
+                            <div className="col-3"><SprogTimepicker position="left"/></div>
+                        </div>
+                        <div className="row">
+                            <div className="col-3"></div>
+                            <div className="col-6"><SprogDatepicker placeholder="End date" width="100%" marginBottom="20px"/></div>
+                            <div className="col-3"><SprogTimepicker position="left"/></div>
                         </div>
                         <div className="row mt-4">
                             <div className="col-12">
@@ -102,7 +113,7 @@ class newEntry extends Component {
                     </div>
                     <div className="col-md-6">
                         <Normal type="text" placeholder="Address Search" width="100%" marginBottom="20px"/>
-                        <Normal type="text" placeholder="Website" width="100%" marginBottom="20px"/>
+                        <Normal type="text" placeholder="Post Code" width="100%" marginBottom="20px"/>
                         <Normal type="text" placeholder="Phone Number" width="100%" marginBottom="20px"/>
                         <Normal type="text" placeholder="Direct URL for 'BOOK NOW' button" width="100%" marginBottom="20px"/>
                     </div>
@@ -176,8 +187,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    onLoad: () => 
-		dispatch({ type: BUSINESS_MODE })
+    onLoad              : () => dispatch({ type: BUSINESS_MODE }),
+    addChildAddmission  : () => dispatch({ type: ADD_CHILD_ADDMISSION })
 });
 export default connect(mapStateToProps, mapDispatchToProps)(newEntry);
 

@@ -5,10 +5,11 @@ import contactus from './reducers/contactus';
 import result from './reducers/result';
 import detail from './reducers/detail';
 import common from './reducers/common';
+import business from './reducers/business';
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
 export default combineReducers({
-    home, aboutus, faq, contactus, result, detail, common,
+    home, aboutus, faq, contactus, result, detail, common, business,
     router: routerReducer
 });
