@@ -347,4 +347,8 @@
     .counter input, .position input, .search input, .datepicker input{
         font-size: 12px;
     }
+    .counter .control span.minus{
+        margin-right: 5px;
+        padding-right: 5px;
+    }
 }

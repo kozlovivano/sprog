@@ -25,7 +25,6 @@ class SprogTimepicker extends Component {
         return (
             <div className="timepicker" style={style}>
                 <DatePicker
-                    placeholderText={this.props.placeholder}
                     selected={this.state.startDate}
                     onChange={this.handleChange}
                     showTimeSelect
