@@ -17,9 +17,10 @@ class landing extends Component {
                             <h3 className="text-center" style={{fontWeight: '600', color: '#666666'}}>"Insert Text Box"</h3>
                             <div className="form bg-blue" style={{borderRadius: '20px', padding: '10px'}}>
                                 <h4 className="text-center" style={{color: 'white', fontWeight: '600'}}>Join Us!</h4>
-                                <Normal type="text" placeholder="Business Name" width="100%" marginBottom="30px"/>
-                                <Normal type="text" placeholder="Main Contact Email Address" width="100%" marginBottom="30px"/>
-                                <Normal type="text" placeholder="Contact Number" width="100%" marginBottom="30px"/>
+                                <Normal type="text" placeholder="Business Name" width="100%" marginBottom="20px"/>
+                                <Normal type="text" placeholder="Main Contact Email Address" width="100%" marginBottom="20px"/>
+                                <Normal type="text" placeholder="Contact Number" width="100%" marginBottom="20px"/>
+                                <Normal type="text" placeholder="Business Main Address" width="100%" marginBottom="20px"/>
                                 <Normal type="text" placeholder="Post Code" width="100%" marginBottom="20px"/>
                                 <Link to="/business/entry" className="btn" style={{marginBottom: '10px', width: '160px', fontSize: '18px', fontWeight: '600', color: 'white', backgroundColor: '#4cd53c', borderRadius: '8px'}}>Start</Link>
                             </div>
