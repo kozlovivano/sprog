@@ -1,9 +1,9 @@
 import {
-    ADD_CHILD_ADDMISSION, REMOVE_ENTRY
+    ADD_CHILD_ADMISSION, REMOVE_ENTRY
 } from '../constants/actionTypes';
 
 const defaultState = {
-    count_child_addmission: [1],
+    count_child_admission: [1],
     entries: [
         {
             id: 1,
@@ -22,10 +22,10 @@ const defaultState = {
 
 export default (state = defaultState, action) => {
     switch (action.type){
-        case ADD_CHILD_ADDMISSION:
+        case ADD_CHILD_ADMISSION:
             return{
                 ...state,
-                count_child_addmission: [...state.count_child_addmission, state.count_child_addmission.length + 1]
+                count_child_admission: [...state.count_child_admission, state.count_child_admission.length + 1]
             }
         case REMOVE_ENTRY:
             const entries = state.entries.filter(item => item.id !== action.id);

@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import DrawerToggleBotton from './sidedrawer/DrawerToggleButton';
+import { LOG_OUT } from '../../redux/constants/actionTypes';
 import './style.css';
+
 class NavBar extends Component {
+    logout = () => {
+        this.props.onLogout();
+    }
     render() {
         return (
             <React.Fragment>
@@ -24,16 +29,15 @@ class NavBar extends Component {
                                         <li><Link to="/user/aboutus">About Us</Link></li>
                                         <li><Link to="/user/faq">FAQ's</Link></li>
                                         <li><Link to="/user/contactus">Contact Us</Link></li>
-                                        <li><Link to="/user/login">Login</Link></li>
+                                        {!this.props.common.logged_in ? <li><Link to="/user/login">Log in</Link></li> : <li><button className="bg-blue" onClick={() => this.logout()}>Log out</button></li>}
                                     </React.Fragment>
                                 }
                                 {
                                     this.props.common.business_mode && 
                                     <React.Fragment>
                                         <li><Link to="/user">User</Link></li>
-                                        <li><Link to="/business/account">Account settings</Link></li>
                                         <li><Link to="/business/mission">Our mission</Link></li>
-                                        <li><Link to="/business/login">Login</Link></li>
+                                        {!this.props.common.logged_in ? <li><Link to="/business/login">Log in</Link></li> : <li><button className="bg-blue" onClick={() => this.logout()}>Log out</button></li>}
                                     </React.Fragment>
                                 }
                             </ul>
@@ -52,6 +56,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    
+    onLogout: () => dispatch({ type: LOG_OUT }),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

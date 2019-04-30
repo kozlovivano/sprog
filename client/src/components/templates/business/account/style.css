@@ -1,0 +1,33 @@
+.account{
+    position: relative;
+}
+.account .title{
+    font-weight: 600;
+    padding: 30px 0px 10px 0px;
+}
+.account a{
+    width: 80%;
+    margin: 15px 0px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    border-radius: 8px;
+}
+.account .logo{
+    position: absolute;
+    right: 15px;
+    top: 0px;
+}
+@media (max-width: 576px){
+    .account a{
+        width: 100%;
+    }
+    .account .logo{
+        left: 50%;
+        margin-left: -50px;
+        top: 10px;
+    }
+    .account .title{
+        padding-top: 120px;
+    }
+}

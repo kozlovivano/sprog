@@ -36,6 +36,12 @@
     font-size: 18px;
     font-weight: 600;
 }
+.toolbar_navigation-items button{
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+}
 .toolbar_navigation-items a{
     color: white;
 }

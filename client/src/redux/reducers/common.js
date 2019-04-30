@@ -1,12 +1,15 @@
 import {
     APP_LOAD,
     USER_MODE,
-    BUSINESS_MODE
+    BUSINESS_MODE,
+    LOG_IN,
+    LOG_OUT
 } from '../constants/actionTypes';
 
 const defaultState = {
     appName: 'Sprog',
     token: null,
+    logged_in: false,
     user_mode: false,
     business_mode: false,
     week_days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -32,6 +35,16 @@ export default (state = defaultState, action) => {
                 ...state,
                 user_mode: false,
                 business_mode: true
+            }
+        case LOG_IN:
+            return{
+                ...state,
+                logged_in: true
+            }
+        case LOG_OUT:
+            return{
+                ...state,
+                logged_in: false
             }
         default:
             return state;

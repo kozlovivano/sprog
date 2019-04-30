@@ -14,8 +14,10 @@ import Landing from './components/templates/business/landing/landing';
 import Mission from './components/templates/business/mission/mission';
 import Account from './components/templates/business/account/account';
 import BusinessHome from './components/templates/business/home/home';
-import Entry from './components/templates/business/entry/entry';
-import NewEntry from './components/templates/business/new/new';
+import Submit from './components/templates/business/submit/submit';
+import NewEntry from './components/templates/business/entry/new';
+import EditEntry from './components/templates/business/entry/edit';
+import Preview from './components/templates/business/entry/preview';
 
 export default(
     <React.Fragment>
@@ -34,9 +36,12 @@ export default(
             <Route path="/business/mission" component={ Mission } />
             <Route path="/business/account" component={ Account } />
             <Route path="/business/home" component={ BusinessHome } />
-            <Route path="/business/entry" component={ Entry } />
-            <Route path="/business/new" component={ NewEntry } />
+            <Route path="/business/submit" component={ Submit } />
+            <Route path="/business/new_entry" component={ NewEntry } />
+            <Route path="/business/edit_entry/:id" component={ EditEntry } />
             <Route path="/business/login" component={ Login } />
+            <Route path="/business/preview" component={ Preview } />
+
             <Route component={ Home }/>
         </Switch>
     </React.Fragment>

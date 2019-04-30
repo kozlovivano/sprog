@@ -1,0 +1,148 @@
+.preview h4{
+    font-weight: 700;
+}
+.preview p{
+    padding: 0;
+    margin: 0;
+}
+.preview .title .price{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 75px;
+    font-size: 45px;
+    color: white;
+    font-weight: 700;
+    border-radius: 15px;
+}
+.preview .title .name{
+    font-size: 50px;
+    line-height: 75px;
+    font-weight: 600;
+    color: #444444;
+    margin: 0;
+}
+.preview .title .book{
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 15px;
+}
+
+.preview .age_range .age{
+    padding: 5px 8px;
+    margin-right: 40px;
+    border: 3px solid #3ca7d5;
+    border-radius: 7px;
+}
+
+.preview .facilities .facility{
+    display: inline;
+}
+.preview .facilities .facility i{
+    margin-left: 2px;
+    margin-top: 5px;
+    width: 40px;
+    height: 45px;
+    text-align: center;
+    padding-top: 6px;
+    border: 3px solid #3ca7d5;
+    border-radius: 7px;
+}
+.preview div.slider{
+    height: 280px;
+    border-bottom: 1px solid #bbbbbb;
+}
+.preview div.slider>div{
+    position: relative;
+}
+.preview .thumbs-wrapper.axis-vertical{
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+.preview .thumbs-wrapper.axis-vertical ul{
+    padding: 0;
+}
+.preview .carousel.carousel-slider{
+    position: absolute;
+    top: 50px;
+    border-radius: 20px;
+    width: 360px;
+    height: 220px;
+}
+.preview .thumbs-wrapper.axis-vertical img{
+    border-radius: 7px;
+}
+
+.preview .contact{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+@media (max-width: 992px){
+}
+@media (max-width: 1200px) and (min-width: 768px){
+    .preview .age_range .age{
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 576px){
+    .preview .title .price{
+        font-size: 40px;
+    }
+    .preview .title .name{
+        font-size: 50px
+    }
+    .preview .age_range .age{
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 576px) and (min-width: 411px){
+    .preview .title .price{
+        font-size: 30px;
+    }
+    .preview .title .name{
+        font-size: 30px
+    }
+    .preview .age_range .age{
+        margin-right: 50px;
+    }
+    .preview .age_range .age:last-child{
+        margin: 0;
+    }
+}
+
+@media (max-width: 410px){
+    .preview .title .price{
+        font-size: 30px;
+    }
+    .preview .title .name{
+        font-size: 20px
+    }
+    .preview .title .book{
+        font-size: 15px;
+    }
+    .preview .age_range .age{
+        margin-right: 20px;
+    }
+    .preview .age_range .age:last-child{
+        margin: 0;
+    }
+    .result .filter-btn{
+        width: 72px;
+        right: 15px;
+    }
+    .preview .working-time{
+        font-size: 12px;
+    }
+    .preview .working-time div{
+        padding: 0px;
+        text-align: right;
+    }
+}

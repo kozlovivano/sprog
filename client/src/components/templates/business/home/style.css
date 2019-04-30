@@ -22,7 +22,7 @@
     .business_home a{
         width: 100%;
     }
-    .logo{
+    .business_home .logo{
         left: 50%;
         margin-left: -50px;
         top: 10px;

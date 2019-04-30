@@ -7,7 +7,7 @@ import Check from '../../../fragments/inputs/check';
 import SprogDatepicker from '../../../fragments/inputs/datepicker';
 import SprogTimepicker from '../../../fragments/inputs/timepicker';
 import { BUSINESS_MODE } from '../../../../redux/constants/actionTypes';
-import { ADD_CHILD_ADDMISSION } from '../../../../redux/constants/actionTypes';
+import { ADD_CHILD_ADMISSION } from '../../../../redux/constants/actionTypes';
 
 import './style.css';
 
@@ -16,8 +16,8 @@ class newEntry extends Component {
     componentWillMount(){
 		this.props.onLoad();
     }
-    add_child_addmission(props){
-        props.addChildAddmission();
+    add_child_admission(props){
+        props.addChildAdmission();
     }
     render() {
         return (
@@ -27,12 +27,12 @@ class newEntry extends Component {
                     <div className="col-md-6">
                         <Normal type="text" placeholder="Business Name" width="100%" marginBottom="20px"/>
                         <Text placeholder="Description" rows="6" width="100%" marginBottom="30px"/>
-                        <h4>Child Addmission <i onClick={() => this.add_child_addmission(this.props)} className="fa fa-plus-circle c-blue" style={{fontSize: "30px", marginLeft: "10px"}}></i></h4>
+                        <h4>Child Admission <i onClick={() => this.add_child_admission(this.props)} className="fa fa-plus-circle c-blue" style={{fontSize: "30px", marginLeft: "10px"}}></i></h4>
                         <div className="row">
                             <div className="col-3"><h5>Price</h5></div>
                             <div className="col-9"><h5>Age range</h5></div>
                         </div>
-                        {this.props.business.count_child_addmission.map((item, index) => 
+                        {this.props.business.count_child_admission.map((item, index) => 
                             <div className="row" key={index}>
                                 <div className="col-3"><Normal type="text" placeholder="$0.00" width="100%" marginBottom="20px"/></div>
                                 <div className="col-3"><Normal type="text" placeholder="--" width="100%" marginBottom="20px" textAlign="center"/></div>
@@ -40,7 +40,7 @@ class newEntry extends Component {
                                 <div className="col-3"><Normal type="text" placeholder="--" width="100%" marginBottom="20px" textAlign="center"/></div>
                             </div>
                         )}
-                        <h4>Adult Addmission</h4>
+                        <h4>Adult Admission</h4>
                         <div className="row">
                             <div className="col-3"><h5>Price</h5></div>
                         </div>
@@ -177,7 +177,14 @@ class newEntry extends Component {
                         }}></i></div>
                     </div>
                 </div>
-                <Link to="/business/new" className="btn" style={{marginTop: '20px', marginBottom: '10px', fontSize: '18px', fontWeight: '600', color: 'white', backgroundColor: '#3ca7d5', borderRadius: '10px', width: '100%'}}>Preview Submission</Link>
+                <div className="row">
+                    <div className="col-6">
+                        <Link to="/business/preview" className="btn" style={{marginTop: '20px', marginBottom: '10px', fontSize: '18px', fontWeight: '600', color: 'white', backgroundColor: '#3ca7d5', borderRadius: '10px', width: '100%'}}>Preview Submission</Link>
+                    </div>
+                    <div className="col-6">
+                        <Link to="/business/home" className="btn" style={{marginTop: '20px', marginBottom: '10px', fontSize: '18px', fontWeight: '600', color: 'white', backgroundColor: '#3ca7d5', borderRadius: '10px', width: '100%'}}>Cancel</Link>
+                    </div>
+                </div>
             </div>
         );
     }
@@ -188,7 +195,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     onLoad              : () => dispatch({ type: BUSINESS_MODE }),
-    addChildAddmission  : () => dispatch({ type: ADD_CHILD_ADDMISSION })
+    addChildAdmission  : () => dispatch({ type: ADD_CHILD_ADMISSION })
 });
 export default connect(mapStateToProps, mapDispatchToProps)(newEntry);
 
