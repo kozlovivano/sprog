@@ -1,5 +1,5 @@
 import {
-    ADD_CHILD_ADMISSION, REMOVE_ENTRY
+    ADD_CHILD_ADMISSION, REMOVE_ENTRY, REMOVE_CHILD_ADMISSION
 } from '../constants/actionTypes';
 
 const defaultState = {
@@ -26,6 +26,11 @@ export default (state = defaultState, action) => {
             return{
                 ...state,
                 count_child_admission: [...state.count_child_admission, state.count_child_admission.length + 1]
+            }
+        case REMOVE_CHILD_ADMISSION:
+            return{
+                ...state,
+                count_child_admission: state.count_child_admission.filter(item => item !== action.item)
             }
         case REMOVE_ENTRY:
             const entries = state.entries.filter(item => item.id !== action.id);

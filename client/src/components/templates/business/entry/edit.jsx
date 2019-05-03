@@ -8,6 +8,7 @@ import SprogDatepicker from '../../../fragments/inputs/datepicker';
 import SprogTimepicker from '../../../fragments/inputs/timepicker';
 import { BUSINESS_MODE } from '../../../../redux/constants/actionTypes';
 import { ADD_CHILD_ADMISSION } from '../../../../redux/constants/actionTypes';
+import { REMOVE_CHILD_ADMISSION } from '../../../../redux/constants/actionTypes';
 
 import './style.css';
 
@@ -19,6 +20,9 @@ class editEntry extends Component {
     add_child_admission(props){
         props.addChildAdmission();
     }
+    remove_child_admission(item, props){
+        props.removeChildAdmission(item);
+    }
     render() {
         return (
             <div className="container">
@@ -27,17 +31,20 @@ class editEntry extends Component {
                     <div className="col-md-6">
                         <Normal type="text" placeholder="Business Name" width="100%" marginBottom="20px"/>
                         <Text placeholder="Description" rows="6" width="100%" marginBottom="30px"/>
-                        <h4>Child Admission <i onClick={() => this.add_child_admission(this.props)} className="fa fa-plus-circle c-blue" style={{fontSize: "30px", marginLeft: "10px"}}></i></h4>
+                        <h4>Child Admission 
+                            <i onClick={() => this.add_child_admission(this.props)} className="fa fa-plus-circle c-blue" style={{fontSize: "30px", marginLeft: "10px"}}></i>
+                        </h4>
                         <div className="row">
                             <div className="col-3"><h5>Price</h5></div>
                             <div className="col-9"><h5>Age range</h5></div>
                         </div>
                         {this.props.business.count_child_admission.map((item, index) => 
-                            <div className="row" key={index}>
+                            <div className="row" key={item}>
                                 <div className="col-3"><Normal type="text" placeholder="$0.00" width="100%" marginBottom="20px"/></div>
                                 <div className="col-3"><Normal type="text" placeholder="--" width="100%" marginBottom="20px" textAlign="center"/></div>
-                                <div className="col-3">To</div>
+                                <div className="col-1">To</div>
                                 <div className="col-3"><Normal type="text" placeholder="--" width="100%" marginBottom="20px" textAlign="center"/></div>
+                                {(index !== 0) && <i onClick={() => this.remove_child_admission(item, this.props)} className="fa fa-minus-circle c-blue" style={{fontSize: "30px", marginLeft: "10px"}}></i>}
                             </div>
                         )}
                         <h4>Adult Admission</h4>
@@ -195,7 +202,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     onLoad              : () => dispatch({ type: BUSINESS_MODE }),
-    addChildAdmission  : () => dispatch({ type: ADD_CHILD_ADMISSION })
+    addChildAdmission  : () => dispatch({ type: ADD_CHILD_ADMISSION }),
+    removeChildAdmission    : (item) => dispatch({ type: REMOVE_CHILD_ADMISSION, item: item })
 });
 export default connect(mapStateToProps, mapDispatchToProps)(editEntry);
 
