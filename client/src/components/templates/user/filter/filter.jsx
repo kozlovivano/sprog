@@ -76,7 +76,7 @@ class Filter extends Component {
                                         defaultValue={[50, 100]} 
                                         marks={{ 0: "£0", 50: "£50", 100: "£100", 150: "£150", 200: "£200", 250: "£250" }}
                                         onChange={this.handleChange}
-                                        tipFormatter={value => `££{value}`}
+                                        tipFormatter={value => `£${value}`}
                                     />
                                 </div>
                             </div>
