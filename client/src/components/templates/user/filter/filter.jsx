@@ -67,16 +67,16 @@ class Filter extends Component {
                                 <h5 style={{fontWeight: "700"}}>Age Range</h5>
                                 <Age></Age>
                                 <h5 style={{fontWeight: "700"}} className="mt-3">Spending Range</h5>
-                                <Label text={"$" + this.state.sliderValues[0]} position="left"></Label>
-                                <Label text={"$" + this.state.sliderValues[1]} position="right"></Label>
+                                <Label text={"£" + this.state.sliderValues[0]} position="left"></Label>
+                                <Label text={"£" + this.state.sliderValues[1]} position="right"></Label>
                                 <div className="price-range">
                                     <Range 
                                         min={0}
                                         max={250} 
                                         defaultValue={[50, 100]} 
-                                        marks={{ 0: "$0", 50: "$50", 100: "$100", 150: "$150", 200: "$200", 250: "$250" }}
+                                        marks={{ 0: "£0", 50: "£50", 100: "£100", 150: "£150", 200: "£200", 250: "£250" }}
                                         onChange={this.handleChange}
-                                        tipFormatter={value => `$${value}`}
+                                        tipFormatter={value => `££{value}`}
                                     />
                                 </div>
                             </div>

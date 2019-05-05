@@ -42,7 +42,7 @@ class businessHome extends Component {
                         <Link className="btn bg-blue" to="/business/new_entry">Create New Entry</Link>
                     </div>
                     <div className="col-sm-6 mt-3">
-                        <button className="btn bg-blue" style={{marginBottom: '10px', fontSize: '18px', fontWeight: '600', color: 'white', backgroundColor: '#3ca7d5', borderRadius: '10px', width: '100%'}}>Live entries</button>
+                        <div className="" style={{marginBottom: '10px', fontSize: '22px', fontWeight: '600', width: '100%', textAlign: 'center'}}>Live entries</div>
                         <div className="row">
                             {this.props.business.entries.map((item, index) => {
                                 return (

@@ -38,6 +38,11 @@ class Normal extends Component {
             );
         }
     }
+    addCurrencySymbole = (e) => {
+        if((e.target.value.indexOf("£") === -1) && (e.target.value !== '')){
+            e.target.value = "£ " + e.target.value;
+        }
+    }
     render() {
         const style = {
             width: this.props.width,
@@ -49,6 +54,7 @@ class Normal extends Component {
                     type={this.props.type} 
                     placeholder={this.props.placeholder}
                     style={{textAlign: this.props.textAlign}}
+                    onKeyUp={this.addCurrencySymbole}
                 />}
                 {this.props.type === "address" && <div>
                     <input 
