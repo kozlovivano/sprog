@@ -26,8 +26,7 @@ class SprogDatepicker extends Component {
                     placeholderText={this.props.placeholder}
                     selected={this.state.startDate}
                     onChange={this.handleChange}
-                    focusOnShow={false}
-                    readonly={true}
+                    disabledKeyboardNavigation
                 />
                 <div className="control">
                     <span className="point">

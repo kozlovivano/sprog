@@ -32,8 +32,7 @@ class SprogTimepicker extends Component {
                     timeIntervals={15}
                     dateFormat="HH:mm"
                     timeCaption="Time"
-                    focusOnShow={false}
-                    readonly={true}
+                    disabledKeyboardNavigation
                 />
             </div>
         );
