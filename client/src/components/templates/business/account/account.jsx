@@ -40,17 +40,17 @@ class account extends Component {
                 <div className="row">
                     <div className="col-sm-6 mt-3">
                         <Normal type="text" placeholder="Business Name" width="100%" marginBottom="10px"/>
-                        <Normal type="text" placeholder="Business Address" width="100%" marginBottom="10px"/>
-                        <Normal type="text" placeholder="Post Code" width="100%" marginBottom="10px"/>
-                        <Normal type="text" placeholder="Monthly Subscription" width="100%" marginBottom="10px"/>
-                        <Normal type="text" placeholder="Phone Number" width="100%" marginBottom="10px"/>
+                        <Normal type="address" placeholder="Business Address" width="100%" marginBottom="10px"/>
+                        <Normal type="number" placeholder="Post Code" width="100%" marginBottom="10px"/>
+                        <Normal type="number" placeholder="Monthly Subscription" width="100%" marginBottom="10px"/>
+                        <Normal type="number" placeholder="Phone Number" width="100%" marginBottom="10px"/>
                         <Normal type="email" placeholder="Email" width="100%" marginBottom="10px"/>
                         <Normal type="text" placeholder="Web Site" width="100%" marginBottom="10px"/>
                         <Link to="/business/home" className="btn" style={{marginBottom: '10px', width: '160px', fontSize: '18px', fontWeight: '600', color: 'white', backgroundColor: '#4cd53c', borderRadius: '10px'}}>Update</Link>
                         <button className="btn" style={{margin: '15px 0px', marginBottom: '10px', width: '160px', fontSize: '18px', fontWeight: '600', color: '#3ca7d5', backgroundColor: 'transparent', borderRadius: '10px', float: 'right'}}>Help & Support</button>
                     </div>
                     <div className="col-sm-6 mt-3">
-                        <button className="btn bg-blue" style={{marginBottom: '10px', fontSize: '18px', fontWeight: '600', color: 'white', backgroundColor: '#3ca7d5', borderRadius: '10px', width: '100%'}}>Live entries</button>
+                        <div style={{marginBottom: '10px', fontSize: '22px', fontWeight: '600', width: '100%', textAlign: 'center'}}>Live entries</div>
                         <div className="row">
                             {this.props.business.entries.map((item, index) => {
                                 return (

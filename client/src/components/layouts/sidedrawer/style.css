@@ -52,6 +52,12 @@
     font-size: 1.5rem;
     color: white;
 }
+.side-drawer ul button{
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    font-weight: 600;
+}
 .backdrop{
     position: fixed;
     width: 100%;

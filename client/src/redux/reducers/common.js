@@ -11,6 +11,7 @@ const defaultState = {
     token: null,
     logged_in: false,
     user_mode: false,
+    showMenu: false,
     business_mode: false,
     week_days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
     facilities: ["Outdoor", "Indoor", "Wifi", "Parking", "Food", "Disabled", "Toilets", "Baby", "SEN"]

@@ -8,11 +8,8 @@ class Normal extends Component {
             city: '',
             query: ''
         };
-        // Bind Functions
-        this.handleScriptLoad = this.handleScriptLoad.bind(this);
-        this.handlePlaceSelect = this.handlePlaceSelect.bind(this);
     }
-    handleScriptLoad() {
+    handleScriptLoad = () => {
 
         // Initialize Google Autocomplete
         /*global google*/ // To disable any eslint 'google not defined' errors
@@ -22,7 +19,7 @@ class Normal extends Component {
         // Fire Event when a suggested name is selected
         this.autocomplete.addListener('place_changed', this.handlePlaceSelect);
     }
-    handlePlaceSelect() {
+    handlePlaceSelect = () => {
         // Extract City From Address Object
         let addressObject = this.autocomplete.getPlace();
         let address = addressObject.address_components;
@@ -39,7 +36,7 @@ class Normal extends Component {
         }
     }
     addCurrencySymbole = (e) => {
-        if((e.target.value.indexOf("£") === -1) && (e.target.value !== '')){
+        if((this.props.type === 'currency') && (e.target.value.indexOf("£") === -1) && (e.target.value !== '')){
             e.target.value = "£ " + e.target.value;
         }
     }

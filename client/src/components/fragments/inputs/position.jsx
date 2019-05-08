@@ -1,6 +1,40 @@
 import React, { Component } from 'react';
+import Script from 'react-load-script';
 
 class Position extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            city: '',
+            query: ''
+        };
+    }
+    handleScriptLoad = () => {
+
+        // Initialize Google Autocomplete
+        /*global google*/ // To disable any eslint 'google not defined' errors
+        this.autocomplete = new google.maps.places.Autocomplete(
+            document.getElementById('autocomplete')
+        );
+        // Fire Event when a suggested name is selected
+        this.autocomplete.addListener('place_changed', this.handlePlaceSelect);
+    }
+    handlePlaceSelect = () => {
+        // Extract City From Address Object
+        let addressObject = this.autocomplete.getPlace();
+        let address = addressObject.address_components;
+
+        // Check if address is valid
+        if (address) {
+            // Set State
+            this.setState(
+                {
+                    city: address[0].long_name,
+                    query: addressObject.formatted_address,
+                }
+            );
+        }
+    }
     render() {
         const style = {
             width: this.props.width,
@@ -8,12 +42,16 @@ class Position extends Component {
         }
         return (
             <div className="position" style={style}>
-                <input type="text" placeholder={this.props.placeholder}/>
+                <input type="text" placeholder={this.props.placeholder} id="autocomplete"/>
                 <div className="control">
                     <span className="point c-blue">
                         <i className="fas fa-map-marker-alt"></i>
                     </span>
                 </div>
+                <Script
+                    url="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRUl1GmjWWWG5BKl9nY3hi6-jH98TSxcI&libraries=places"
+                    onLoad={this.handleScriptLoad}
+                />
             </div>
         );
     }

@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react'
 import './style.css';
-const backdrop = props => (
-    <div className="backdrop" onClick={props.click}></div>
-);
 
-export default backdrop;
+export default class backdrop extends Component {
+    render() {
+        console.log(this.props);
+        return (
+            <div className="backdrop" onClick={this.props.click}></div>
+        )
+    }
+}

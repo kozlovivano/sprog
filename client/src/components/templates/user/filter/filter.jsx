@@ -59,8 +59,8 @@ class Filter extends Component {
                                     </div>
                                 </div>
                                 <div className="mt-3">
-                                    <Counter width="100%" placeholder="How many adults attending?" marginBottom="20px"></Counter>
-                                    <Counter width="100%" placeholder="How many children do you have?" marginBottom="20px"></Counter>
+                                    <Counter type='number' interval='1' width="100%" placeholder="How many adults attending?" marginBottom="20px"></Counter>
+                                    <Counter type='number' interval='1' width="100%" placeholder="How many children do you have?" marginBottom="20px"></Counter>
                                 </div>
                             </div>
                             <div className="col-sm-6">

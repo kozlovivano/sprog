@@ -26,8 +26,8 @@ class Home extends Component {
                 <div className="container home">
                     <div className="row">
                         <div className="col-md-6 mt-4">
-                            <Counter placeholder="How much would you like to spend?" width={(this.props.windowWidth > 992) ? "70%": "100%"} marginBottom="10px"/>
-                            <Counter placeholder="How many children do you have?" width={(this.props.windowWidth > 992) ? "70%": "100%"} marginBottom="10px"/>
+                            <Counter placeholder="How much would you like to spend?" interval='5' type='currency' width={(this.props.windowWidth > 992) ? "70%": "100%"} marginBottom="10px"/>
+                            <Counter placeholder="How many children do you have?" interval='1' type='integer' width={(this.props.windowWidth > 992) ? "70%": "100%"} marginBottom="10px"/>
                             <Position placeholder="Enter location/Geotag" width={(this.props.windowWidth > 992) ? "70%": "100%"} marginBottom="10px"/>
                             <div className="button-group">
                                 <Link to="/user/result" className="sprog-btn bg-blue">Sprog it</Link>
@@ -43,7 +43,7 @@ class Home extends Component {
                         className="owl-theme"
                         loop
                         autoplay={true}
-                        autoplayTimeout={2000}
+                        autoplayTimeout={4000}
                         autoplayHoverPause
                         margin={10}
                         nav={true}

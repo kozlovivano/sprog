@@ -40,7 +40,7 @@ class editEntry extends Component {
                         </div>
                         {this.props.business.count_child_admission.map((item, index) => 
                             <div className="row" key={item}>
-                                <div className="col-3"><Normal type="text" placeholder="£0.00" width="100%" marginBottom="20px"/></div>
+                                <div className="col-3"><Normal type="currency" placeholder="£0.00" width="100%" marginBottom="20px"/></div>
                                 <div className="col-3"><Normal type="text" placeholder="--" width="100%" marginBottom="20px" textAlign="center"/></div>
                                 <div className="col-1">To</div>
                                 <div className="col-3"><Normal type="text" placeholder="--" width="100%" marginBottom="20px" textAlign="center"/></div>
@@ -52,7 +52,7 @@ class editEntry extends Component {
                             <div className="col-3"><h5>Price</h5></div>
                         </div>
                         <div className="row">
-                            <div className="col-3"><Normal type="text" placeholder="£0.00" width="100%" marginBottom="20px"/></div>
+                            <div className="col-3"><Normal type="currency" placeholder="£0.00" width="100%" marginBottom="20px"/></div>
                         </div>
                         <h4>Group Deals</h4>
                         <div className="row">
@@ -63,7 +63,7 @@ class editEntry extends Component {
                         </div>
                         <div className="row">
                             <div className="col-3"><Check width="100%" marginBottom="30px"/></div>
-                            <div className="col-3"><Normal type="text" placeholder="£0.00" width="100%" marginBottom="20px"/></div>
+                            <div className="col-3"><Normal type="currency" placeholder="£0.00" width="100%" marginBottom="20px"/></div>
                             <div className="col-3"><Normal type="text" placeholder="--" width="100%" marginBottom="20px" textAlign="center"/></div>
                             <div className="col-3"><Normal type="text" placeholder="--" width="100%" marginBottom="20px" textAlign="center"/></div>
                         </div>

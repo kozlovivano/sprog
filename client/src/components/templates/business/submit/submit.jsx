@@ -15,8 +15,8 @@ class entry extends Component {
                     <div className="col-sm-3"></div>
                     <div className="col-sm-6 text-center">
                         <h3 style={{fontWeight: '600', color: '#666666'}}>"Almost Finished"</h3>
-                        <Normal type="text" placeholder="How many business sites?" width="100%" marginBottom="20px"/>
-                        <Normal type="text" placeholder="Monthly Subscription" width="100%" marginBottom="20px"/>
+                        <Normal type="number" placeholder="How many business sites?" width="100%" marginBottom="20px"/>
+                        <Normal type="number" placeholder="Monthly Subscription" width="100%" marginBottom="20px"/>
                         <Link to="/business/home" className="btn" style={{marginTop: '10px', marginBottom: '10px', width: '160px', fontSize: '18px', fontWeight: '600', color: 'white', backgroundColor: '#4cd53c', borderRadius: '10px'}}>Submit</Link>
                     </div>
                     <div className="col-sm-3"></div>
