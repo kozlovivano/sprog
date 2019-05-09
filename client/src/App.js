@@ -31,6 +31,9 @@ class App extends Component {
 	backdropClickHandler = () => {
 		this.setState({sideDrawerOpen: false});
 	}
+	itemClick = () => {
+		this.setState({sideDrawerOpen: false});
+	}
   	render() {
 		let backdrop;
 		if(this.state.sideDrawerOpen){
@@ -40,7 +43,7 @@ class App extends Component {
 			<div>
 				<Router>
 					<NavBar sideState={this.state.sideDrawerOpen} drawerClickHandler={this.drawerToggleClickHandler}></NavBar>
-					<SideDrawer show={this.state.sideDrawerOpen}></SideDrawer>
+					<SideDrawer itemClick={this.itemClick} show={this.state.sideDrawerOpen}></SideDrawer>
 					{backdrop}
 					<div className="content">
 						{ Routes }
